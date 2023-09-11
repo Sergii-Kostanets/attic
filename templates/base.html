@@ -31,21 +31,29 @@
         {% block extra_js %}
         {% endblock %}
 
-        <title>Boutique Ado {% block extra_title %}{% endblock %}</title>
+        <title>Attic {% block extra_title %}{% endblock %}</title>
     </head>
     <body>
-        <header class="container-fluid fixed-top"></header>
-        
+        <header class="container-fluid">
+            <p>Headr</p>
+        </header>
+
         {% if messages %}
         <div class="message-container"></div>
         {% endif %}
-        
+
         {% block page_header %}
         {% endblock %}
-        
-        {% block content %}
-        {% endblock %}
-        
+
+        <section>
+            {% block content %}
+            {% endblock %}
+        </section>
+
+        <footer class="container-fluid">
+            Footer
+        </footer>
+
         {% block postloadjs %}
         {% endblock %}
 
