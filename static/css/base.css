@@ -35,8 +35,8 @@ footer {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: #fff;
+    color: #000;
     min-width: 260px;
 }
 
@@ -48,14 +48,15 @@ footer {
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    border: 1px solid #fff;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #222;
     color: white !important;
+    border: 1px solid #222;
 }
 
 .shop-now-button:hover,
@@ -90,7 +91,9 @@ footer {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	/* background: white; */
+    background: url('/media/background-camera.jpg') no-repeat center center fixed;
+    background-size: cover;
 	z-index: -1;
 }
 
@@ -187,9 +190,13 @@ input[name='q']::placeholder {
 
 /* Allauth form formatting */
 
+.allauth-form-inner-content p,
+.allauth-form-inner-content h2 {
+    color: #ffffff; /* text-secondary */
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -210,15 +217,15 @@ input[name='q']::placeholder {
 	/* btn */
 	display: inline-block;
     font-weight: 400;
-    color: #fff;
+    color: #000000;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
