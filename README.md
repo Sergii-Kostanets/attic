@@ -19,12 +19,6 @@ pip3 freeze > requirements.txt
 ```
 Here
 ```
-python3 manage.py startapp products
-```
-```
-mkdir products/fixtures
-```
-```
 python3 manage.py makemigrations --dry-run
 ```
 ```

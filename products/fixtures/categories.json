@@ -1,0 +1,74 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "film_cameras",
+            "friendly_name": "Film Cameras"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "digital_cameras",
+            "friendly_name": "Digital Cameras"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "flashlights",
+            "friendly_name": "Flashlights"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "adapters",
+            "friendly_name": "Adapters"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "caps",
+            "friendly_name": "Caps"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "tripods",
+            "friendly_name": "Tripods"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "accessories",
+            "friendly_name": "Other Accessories"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "specials",
+            "friendly_name": "Specials"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "lenses",
+            "friendly_name": "Lenses"
+        }
+    }
+]

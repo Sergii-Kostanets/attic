@@ -1,0 +1,184 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340001",
+            "name": "Canon 1",
+            "description": "Cannon description",
+            "price": 20.99,
+            "category": 1,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/canon.jpg",
+            "image": "canon.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340002",
+            "name": "Nikon 1",
+            "description": "Nikon description",
+            "price": 30.99,
+            "category": 1,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/nikon.jpg",
+            "image": "nikon.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340003",
+            "name": "Minolta",
+            "description": "Description",
+            "price": 53.99,
+            "category": 2,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/minolta.jpg",
+            "image": "minolta.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340004",
+            "name": "Kiev",
+            "description": "Description",
+            "price": 10.99,
+            "category": 2,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/kiev.jpg",
+            "image": "kiev.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340005",
+            "name": "Ricoh",
+            "description": "Description",
+            "price": 10.99,
+            "category": 6,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/ricoh.jpg",
+            "image": "ricoh.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340006",
+            "name": "Fed",
+            "description": "Description",
+            "price": 10.99,
+            "category": 2,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/fed.jpg",
+            "image": "fed.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340007",
+            "name": "Cap 52mm",
+            "description": "Description",
+            "price": 10.99,
+            "category": 5,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/cap-52.jpg",
+            "image": "cap-52.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340008",
+            "name": "Flash",
+            "description": "Description",
+            "price": 10.99,
+            "category": 3,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/flashlight.jpg",
+            "image": "flashlight.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340009",
+            "name": "Lamp",
+            "description": "Description",
+            "price": 10.99,
+            "category": 8,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/lamp.jpg",
+            "image": "lamp.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340010",
+            "name": "Lens",
+            "description": "Description",
+            "price": 11.99,
+            "category": 9,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/lens.jpg",
+            "image": "lens.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340011",
+            "name": "Praktica Canon",
+            "description": "Description",
+            "price": 10.99,
+            "category": 4,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/praktica-canon.jpg",
+            "image": "praktica-canon.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340012",
+            "name": "Strap",
+            "description": "Description",
+            "price": 10.99,
+            "category": 7,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/strap.jpg",
+            "image": "strap.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340013",
+            "name": "UV Filter 49mm",
+            "description": "Description",
+            "price": 10.99,
+            "category": 7,
+            "rating": 4.6,
+            "image_url": "https://attic-test-images.s3.eu-west-1.amazonaws.com/uv-49.jpg",
+            "image": "uv-49.jpg"
+        }
+    }
+]
