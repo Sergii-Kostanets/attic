@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/background-home.jpg') no-repeat center center fixed;
+    background: url('https://attic-test-images.s3.eu-west-1.amazonaws.com/background-home.jpg') no-repeat center center fixed;
     background-size: cover;
     /* height: calc(100vh - 164px); */
     height: 100vh;
@@ -156,7 +156,7 @@ footer {
 	left: 0;
 	position: fixed;
 	/* background: white; */
-    background: url('/media/background-camera.jpg') no-repeat center center fixed;
+    background: url('https://attic-test-images.s3.eu-west-1.amazonaws.com/background-camera.jpg') no-repeat center center fixed;
     background-size: cover;
 	z-index: -1;
 }
@@ -368,9 +368,9 @@ input[name='q']::placeholder {
         padding-top: 116px;
     }
 
-    body {
+    /* body { */
         /* height: calc(100vh - 116px); */
-    }
+    /* } */
     
     .display-4.logo-font.text-white {
         font-size: 2rem;
