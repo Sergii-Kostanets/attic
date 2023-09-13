@@ -332,7 +332,7 @@ input[name='q']::placeholder {
     background-color: #dc3545;
 }
 
-/* -------------------------------- Media Queries */
+/* Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
