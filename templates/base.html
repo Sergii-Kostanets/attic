@@ -15,6 +15,9 @@
         {% endblock %}
 
         {% block corecss %}
+        <link rel="apple-touch-icon" sizes="180x180" href="../media/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <!-- Google Fonts -->
@@ -47,7 +50,14 @@
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="logo-font text-black my-0"><strong>Attic</strong> Shop</h2>
+                        <h2 class="logo-font text-black my-0">
+                            
+                            <strong>
+                                A
+                                <img class="logo-image" src="../media/attic-logo-black-crop.png" alt="Attic logo">
+                                ic
+                            </strong> Shop
+                        </h2>
                     </a>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">

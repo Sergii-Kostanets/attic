@@ -13,6 +13,11 @@ body {
     flex-direction: column;
 }
 
+.logo-image {
+    width: 38px;
+    padding-bottom: 5px;
+}
+
 footer {
     margin-top: auto;
     background-color: #000;
