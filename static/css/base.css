@@ -412,9 +412,9 @@ input[name='q']::placeholder {
 @media (max-width: 991px) {
     
     .logo-image {
-        width: 19px;
-        padding-bottom: 4px;
-        margin: 0px -4px;
+        width: 30px;
+        padding: 0px;
+        margin: 0px;
     }
     
     .header-container {
