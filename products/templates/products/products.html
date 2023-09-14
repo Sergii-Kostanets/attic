@@ -34,17 +34,17 @@
                             <img class="card-img-top img-fluid" alt="{{ product.name }}" src="{{ MEDIA_URL }}noimage.png">
                             {% endif %}
                         </a>
-                        <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
+                        <div class="card-body bg-dark pb-0">
+                            <p class="mb-0 text-white">{{ product.name }}</p>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer bg-dark pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold text-white">${{ product.price }}</p>
                                     {% if product.rating %}
-                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                        <small class="text-muted text-gold"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                     {% else %}
-                                        <small class="text-muted">No Rating</small>
+                                        <small class="text-muted text-gold">No Rating</small>
                                     {% endif %}
                                 </div>
                             </div>
