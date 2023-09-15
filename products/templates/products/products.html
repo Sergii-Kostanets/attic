@@ -75,19 +75,19 @@
             </div>
             <!-- Pagination row -->
             <div class="row">
-                <div class="col text-center">
-                    <div class="pagination">
-                        <span class="step-links">
+                <div class="col d-flex">
+                    <div class="pagination mx-auto">
+                        <span class="step-links d-flex">
                             {% if products.has_previous %}
-                                <a href="?page=1">&laquo; first</a>
-                                <a href="?page={{ products.previous_page_number }}">previous</a>
+                                <a class="mx-2 text-white" href="?page=1">FIRST</a>
+                                <a class="mx-2 text-white" href="?page={{ products.previous_page_number }}">PREV</a>
                             {% endif %}
-                            <span class="current-page">
-                                Page {{ products.number }} of {{ products.paginator.num_pages }}.
+                            <span class="current-page text-white mx-2">
+                                Page {{ products.number }} of {{ products.paginator.num_pages }}
                             </span>
                             {% if products.has_next %}
-                                <a href="?page={{ products.next_page_number }}">next</a>
-                                <a href="?page={{ products.paginator.num_pages }}">last &raquo;</a>
+                                <a class="mx-2 text-white" href="?page={{ products.next_page_number }}">NEXT</a>
+                                <a class="mx-2 text-white" href="?page={{ products.paginator.num_pages }}">LAST</a>
                             {% endif %}
                         </span>
                     </div>

@@ -46,6 +46,18 @@ body::-webkit-scrollbar-thumb
     background-color: unset !important;
 }
 
+.step-links a {
+    text-decoration: none;
+}
+
+.step-links a:hover,
+.step-links a:focus,
+.step-links a:active {
+    color: #777 !important;
+    border: none;
+    outline: none;
+}
+
 footer {
     margin-top: auto;
     background-color: #000;
@@ -63,7 +75,9 @@ footer {
 .footer-links p a:hover,
 .footer-links p a:focus,
 .footer-links p a:active {
-    color: #222;
+    color: #777;
+    border: none;
+    outline: none;
 }
 
 /* Mailchimp */
@@ -471,6 +485,23 @@ input[name='q']::placeholder {
     
     .footer-links {
         text-align: center;
+    }
+}
+
+@media (max-width: 444px) {
+
+    .step-links {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .step-links a {
+        text-align: center;
+        margin: 0px 0px 10px 0px !important;
+    }
+    
+    .current-page {
+        margin: 0px 0px 15px 0px !important;
     }
 }
 
