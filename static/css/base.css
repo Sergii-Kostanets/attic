@@ -252,6 +252,15 @@ a.category-badge > span.badge:active {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    background-color: #777;
+}
+
+.btt-button:hover {
+    background-color: #fff;
+}
+
+.btt-link:hover {
+    color: #fff;
 }
 
 .btt-link,
