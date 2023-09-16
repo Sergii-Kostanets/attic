@@ -80,6 +80,13 @@ footer {
     outline: none;
 }
 
+i.fa-brands,
+i.fa-solid.fa-file {
+    width: 40px;
+    text-align: center;
+    margin-left: 10px;
+}
+
 /* Mailchimp */
 
 #mc_embed_signup{
@@ -484,7 +491,8 @@ input[name='q']::placeholder {
     }
     
     .footer-links {
-        text-align: center;
+        /* text-align: center; */
+        margin-left: 15%;
     }
 }
 
@@ -502,6 +510,10 @@ input[name='q']::placeholder {
     
     .current-page {
         margin: 0px 0px 15px 0px !important;
+    }
+    
+    .footer-links {
+        margin-left: 4%;
     }
 }
 
@@ -547,5 +559,6 @@ input[name='q']::placeholder {
     
     .footer-links {
         font-size: .8rem;
+        margin-left: 0px;
     }
 }
