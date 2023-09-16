@@ -19,16 +19,49 @@
             <h2 class="logo-font text-white">
                 {% if search_term %}
                     {{ search_term }}
+                {% elif current_categories|length == 1 %}
+                    {{ current_categories.0.friendly_name }}
                 {% else %}
                     Products
                 {% endif %}
             </h2>
+            {% if current_categories|length != 1 %}
+                {% for c in current_categories %}
+                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-white rounded-0 border border-white">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
+            {% endif %}
             <hr class="w-50 mb-1">
         </div>
     </div>
     <div class="row">
         <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-5 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 order-md-first">
+                    <p class="text-white mt-3 text-center text-md-left">
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                            <span class="small text-light"><a href="{% url 'products' %}" class="text-white">Products Home</a> | </span>
+                        {% endif %}
+                        {{ products|length }} of {{ all_products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                    </p>
+                </div>
+            </div>
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -47,6 +80,13 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold text-white">${{ product.price }}</p>
+                                    <!-- {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %} -->
                                     {% if product.rating %}
                                         <small class="text-muted text-gold"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                     {% else %}
@@ -85,8 +125,8 @@
                     <div class="pagination mx-auto">
                         <span class="step-links d-flex">
                             {% if products.has_previous %}
-                                <a class="mx-2 text-white" href="?page=1{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting }}&direction={{ current_direction }}{% endif %}">FIRST</a>
-                                <a class="mx-2 text-white" href="?page={{ products.previous_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting }}&direction={{ current_direction }}{% endif %}">PREV</a>
+                                <a class="mx-2 text-white" href="?page=1{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sort %}&sort={{ current_sort }}&direction={{ current_direction }}{% endif %}">FIRST</a>
+                                <a class="mx-2 text-white" href="?page={{ products.previous_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sort %}&sort={{ current_sort }}&direction={{ current_direction }}{% endif %}">PREV</a>
                             {% endif %}
                             {% if products.paginator.num_pages > 1 %}
                             <span class="current-page text-white mx-2">
@@ -94,8 +134,8 @@
                             </span>
                             {% endif %}
                             {% if products.has_next %}
-                                <a class="mx-2 text-white" href="?page={{ products.next_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting }}&direction={{ current_direction }}{% endif %}">NEXT</a>
-                                <a class="mx-2 text-white" href="?page={{ products.paginator.num_pages }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting }}&direction={{ current_direction }}{% endif %}">LAST</a>
+                                <a class="mx-2 text-white" href="?page={{ products.next_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sort %}&sort={{ current_sort }}&direction={{ current_direction }}{% endif %}">NEXT</a>
+                                <a class="mx-2 text-white" href="?page={{ products.paginator.num_pages }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sort %}&sort={{ current_sort }}&direction={{ current_direction }}{% endif %}">LAST</a>
                             {% endif %}
                         </span>
                     </div>

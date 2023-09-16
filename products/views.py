@@ -23,6 +23,8 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 all_products = all_products.annotate(lower_name=Lower('name'))
+            if 'sortkey' == 'category':
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -53,15 +55,17 @@ def all_products(request):
     # Get the Page object for the current page
     products = paginator.get_page(page)
 
-    # current_sorting = f'{sort}_{direction}'
-    current_sorting = sort
+    current_sorting = f'{sort}_{direction}'
+    current_sort = sort
     current_direction = direction
 
     context = {
+        'all_products': all_products,
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'current_sort': current_sort,
         'current_direction': current_direction,
     }
 

@@ -185,8 +185,8 @@ i.fa-solid.fa-file {
     color: #000 !important;
 }
 
-.text-white {
-    color: #fff !important;
+.text-light {
+    color: #b6b6b6 !important;
 }
 
 .text-gold {
@@ -236,9 +236,14 @@ i.fa-solid.fa-file {
 	z-index: -1;
 }
 
-a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+a.category-badge > span.badge:hover,
+a.category-badge > span.badge:focus,
+a.category-badge > span.badge:focus-visible,
+a.category-badge > span.badge:active {
+    background: #ffffff !important;
+    color: #000 !important;
+    outline: none !important;
+    border: 1px solid #fff !important;
 }
 
 .btt-button {
