@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
+from django.db.models import Q
 from .models import Product
 from django.core.paginator import Paginator
 
@@ -8,6 +10,18 @@ def all_products(request):
 
     # Get all products
     all_products = Product.objects.all()
+
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            all_products = all_products.filter(queries)
 
     # Create a Paginator instance with a specified number of products per page
     paginator = Paginator(all_products, 48)
@@ -20,6 +34,7 @@ def all_products(request):
 
     context = {
         'products': products,
+        'search_term': query,
     }
 
     return render(request, 'products/products.html', context)
