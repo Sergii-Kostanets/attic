@@ -85,8 +85,8 @@
                     <div class="pagination mx-auto">
                         <span class="step-links d-flex">
                             {% if products.has_previous %}
-                                <a class="mx-2 text-white" href="?page=1{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}">FIRST</a>
-                                <a class="mx-2 text-white" href="?page={{ products.previous_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}">PREV</a>
+                                <a class="mx-2 text-white" href="?page=1{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting }}&direction={{ current_direction }}{% endif %}">FIRST</a>
+                                <a class="mx-2 text-white" href="?page={{ products.previous_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting }}&direction={{ current_direction }}{% endif %}">PREV</a>
                             {% endif %}
                             {% if products.paginator.num_pages > 1 %}
                             <span class="current-page text-white mx-2">
@@ -94,8 +94,8 @@
                             </span>
                             {% endif %}
                             {% if products.has_next %}
-                                <a class="mx-2 text-white" href="?page={{ products.next_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}">NEXT</a>
-                                <a class="mx-2 text-white" href="?page={{ products.paginator.num_pages }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}">LAST</a>
+                                <a class="mx-2 text-white" href="?page={{ products.next_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting }}&direction={{ current_direction }}{% endif %}">NEXT</a>
+                                <a class="mx-2 text-white" href="?page={{ products.paginator.num_pages }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting }}&direction={{ current_direction }}{% endif %}">LAST</a>
                             {% endif %}
                         </span>
                     </div>
