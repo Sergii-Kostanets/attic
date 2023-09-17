@@ -129,6 +129,13 @@ i.fa-solid.fa-file {
     border-radius: 0 !important;
 }
 
+/* .refferal_badge {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 /* from Bulma */
 .icon {
     align-items: center;
