@@ -207,7 +207,6 @@ i.fa-solid.fa-file {
 
 .overlay-account {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgb(0, 0, 0)), url('https://attic-test-images.s3.eu-west-1.amazonaws.com/background-product-detail.jpeg') no-repeat center center fixed;
-    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url('https://attic-test-images.s3.eu-west-1.amazonaws.com/background-camera.jpg') no-repeat center center fixed; */
 }
 
 .overlay-home {
@@ -219,14 +218,18 @@ i.fa-solid.fa-file {
 }
 
 .overlay-product-detail {
-    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgb(0, 0, 0)), url('https://attic-test-images.s3.eu-west-1.amazonaws.com/background-camera.jpg') no-repeat center center fixed; */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgb(0, 0, 0)), url('https://attic-test-images.s3.eu-west-1.amazonaws.com/background-product-detail.jpeg') no-repeat center center fixed;
+}
+
+.overlay-bag {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgb(0, 0, 0)), url('https://attic-test-images.s3.eu-west-1.amazonaws.com/background-ricoh.jpeg') no-repeat center center fixed;
 }
 
 .overlay-account,
 .overlay-home,
 .overlay-products,
-.overlay-product-detail {
+.overlay-product-detail,
+.overlay-bag {
 	height: 100%;
 	width: 100%;
 	top: 0;
