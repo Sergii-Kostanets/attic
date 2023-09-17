@@ -164,6 +164,27 @@ i.fa-solid.fa-file {
     color: white;
 }
 
+.btn.btn-light {
+    border: 1px solid #fff;
+    background: #fff;
+    color: #000;
+}
+
+.btn.btn-light:hover,
+.btn.btn-light:active,
+.btn.btn-light:focus,
+.btn.btn-light:focus-visible,
+.btn.btn-light:active:focus-visible {
+    border: 1px solid #222;
+    background: #222;
+    color: gold;
+}
+
+form div .btn.btn-outline-black,
+form div .btn.btn-light {
+    height: 37px;
+}
+
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
@@ -500,12 +521,14 @@ input[name='q']::placeholder {
     }
     
     .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
+    .btn.btn-black.rounded-0,
+    .btn.btn-light.rounded-0 {
         padding: .375rem;
     }
     
     .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
+    .btn.btn-black.rounded-0.btn-lg,
+    .btn.btn-light.rounded-0.btn-lg {
         padding: .375rem;
         font-size: .75rem;
     }
