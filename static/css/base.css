@@ -209,6 +209,10 @@ form div .btn.btn-light {
     color: white;
 }
 
+.table {
+    color: #dadada !important;
+}
+
 .text-black {
     color: #000 !important;
 }
