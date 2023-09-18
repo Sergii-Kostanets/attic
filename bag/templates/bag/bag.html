@@ -41,7 +41,9 @@
                             <td class="py-3">
                                 <p class="my-0">
                                     <strong>
-                                        {{ item.product.name }}
+                                        <a class="text-white" href="{% url 'product_detail' item.product.id %}">
+                                            {{ item.product.name }}
+                                        </a>
                                     </strong>
                                 </p>
                                 <p class="my-0 small text-muted">
