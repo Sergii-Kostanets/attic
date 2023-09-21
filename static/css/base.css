@@ -434,6 +434,10 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
+#div_id_remember .form-check-label {
+    color: #fff !important;
+}
+
 /* Product Form */
 
 .btn-file {
