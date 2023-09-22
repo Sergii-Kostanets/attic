@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handler404
+from django.conf.urls import handler403, handler404, handler500
+from .views import page_not_found_local, server_error, page_forbidden
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +30,13 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'attic.views.handler404'
+handler403 = 'attic.urls.page_forbidden'
+handler404 = 'attic.urls.page_not_found_local'
+handler500 = 'attic.urls.server_error'
+
+if settings.DEBUG:
+    urlpatterns += [
+        path('403', page_forbidden, name='403'),
+        path('404', page_not_found_local, name='404'),
+        path('500', server_error, name='500'),
+    ]

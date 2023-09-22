@@ -502,6 +502,10 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 116px;
     }
+    
+    .display-6 {
+        font-size: 1.5rem !important;
+    }
 
     /* body { */
         /* height: calc(100vh - 116px); */
@@ -615,5 +619,10 @@ input[name='q']::placeholder {
     .footer-links {
         font-size: .8rem;
         margin-left: 0px;
+    }
+    
+    .display-6 {
+        font-size: 1rem !important;
+        margin-top: 25px;
     }
 }
