@@ -37,7 +37,16 @@ body::-webkit-scrollbar-thumb
     margin: 0px -8px;
 }
 
+.card-img-top {
+    border-radius: 0 !important;
+}
+
 .card-img-top.img-fluid {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.standart-aspect-ratio {
     aspect-ratio: 4/3;
     object-fit: cover;
 }
@@ -162,6 +171,20 @@ i.fa-solid.fa-file {
 .btn-black {
     background: black;
     color: white;
+}
+
+.btn-white {
+    background: #fff;
+    color: #000;
+}
+
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus,
+.btn-white:focus-visible,
+.btn-white:active:focus-visible {
+    background: #222;
+    color: #fff;
 }
 
 .btn.btn-light {
@@ -573,6 +596,10 @@ input[name='q']::placeholder {
     
     .footer-links {
         margin-left: 4%;
+    }
+    
+    .confirmation-order-number {
+        font-size: .6rem;
     }
 }
 

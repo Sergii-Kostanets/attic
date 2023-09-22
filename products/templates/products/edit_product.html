@@ -12,19 +12,19 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
+<div class="overlay-product-detail"></div>
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6">
             <hr>
-            <h2 class="logo-font mb-4">Product Management</h2>
-            <h5 class="text-muted">Edit a Product</h5>
+            <h2 class="logo-font mb-4 text-white">Product Management</h2>
+            <h5 class="text-white">Edit a Product</h5>
             <hr>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-6">
-            <form action="{% url 'edit_product' product.id %}" method="POST" class="form mb-2" enctype="multipart/form-data">
+            <form action="{% url 'edit_product' product.id %}" method="POST" class="form mb-2 text-white" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
                     {% if field.name != 'image' %}
@@ -35,7 +35,7 @@
                 {% endfor %}
                 <div class="text-right">
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">Cancel</a>
-                    <button type="submit" class="btn btn-black rounded-0">Update Product</button>
+                    <button type="submit" class="btn btn-outline-black rounded-0">Update Product</button>
                 </div>
             </form>
         </div>
