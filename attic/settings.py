@@ -29,10 +29,10 @@ DEBUG = os.environ.get('DEBUG', False)
 # DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-        os.environ.get('LOCALHOST'),
-        os.environ.get('GITPOD'),
-        os.environ.get('HEROKU')
-    ]
+    os.environ.get('LOCALHOST'),
+    os.environ.get('GITPOD'),
+    os.environ.get('HEROKU')
+]
 
 
 # Application definition

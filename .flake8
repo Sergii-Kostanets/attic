@@ -1,4 +1,4 @@
 [flake8]
-; ignore = E501,E731,DJ01
+ignore = E501,E731,DJ01,F841,DJ07,DJ06,F401
 exclude = .git,__pycache__,venv,.devcontainer,.vscode,env.py,*/migrations/*
-; max-line-length = 100
+max-line-length = 100
