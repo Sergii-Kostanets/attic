@@ -1,1 +1,1 @@
-web: gunicorn atticstore.wsgi:application
+web: gunicorn attic.wsgi:application
