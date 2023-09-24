@@ -1,6 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+from django.core.exceptions import ObjectDoesNotExist
 from products.models import Product
 
 
@@ -11,27 +12,40 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for item_id, item_data in bag.items():
-        if isinstance(item_data, int):
-            product = get_object_or_404(Product, pk=item_id)
-            total += item_data * product.price
-            product_count += item_data
-            bag_items.append({
-                'item_id': item_id,
-                'quantity': item_data,
-                'product': product,
-            })
-        else:
-            product = get_object_or_404(Product, pk=item_id)
-            for size, quantity in item_data['items_by_size'].items():
-                total += quantity * product.price
-                product_count += quantity
+    # Create a copy of the bag dictionary to avoid modifying it while iterating
+    bag_copy = bag.copy()
+
+    for item_id, item_data in bag_copy.items():
+        try:
+            # Try to get the product from the database
+            if isinstance(item_data, int):
+                product = Product.objects.get(pk=item_id)
+                total += item_data * product.price
+                product_count += item_data
                 bag_items.append({
                     'item_id': item_id,
-                    'quantity': quantity,
+                    'quantity': item_data,
                     'product': product,
-                    'size': size,
                 })
+            else:
+                product = Product.objects.get(pk=item_id)
+                for size, quantity in item_data['items_by_size'].items():
+                    total += quantity * product.price
+                    product_count += quantity
+                    bag_items.append({
+                        'item_id': item_id,
+                        'quantity': quantity,
+                        'product': product,
+                        'size': size,
+                    })
+
+        except ObjectDoesNotExist:
+            # If the product doesn't exist, remove it from the bag
+            del bag[item_id]
+            continue  # Continue with the next item in the loop
+
+    # Save the modified bag in the session
+    request.session['bag'] = bag
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

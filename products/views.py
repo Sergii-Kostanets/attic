@@ -100,7 +100,7 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Successfully added product!')
+            messages.info(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
@@ -129,7 +129,7 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated product!')
+            messages.info(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
@@ -156,6 +156,25 @@ def delete_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+
+    # Check if the request method is POST (confirmation form submission)
+    if request.method == 'POST':
+
+        # Check if the product is in the bag and remove it if it is
+        bag = request.session.get('bag', {})
+        if str(product_id) in bag:
+            del bag[str(product_id)]
+            request.session['bag'] = bag
+
+        # Delete the product and redirect to a success page
+        product.delete()
+        messages.info(request, 'Product deleted!')
+        return redirect(reverse('products'))
+
+    # If it's a GET request, render the confirmation page
+    template = 'products/delete_product.html'
+    context = {
+        'product': product,
+    }
+
+    return render(request, template, context)

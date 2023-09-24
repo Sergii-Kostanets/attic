@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| Delete Product{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay-product-detail"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="logo-font mb-4 text-white">Confirm Deletion</h2>
+            <h5 class="text-white">Are you sure you want to delete the product <br>"{{ product.name }}"</h5>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger rounded-0">Confirm Delete</button>
+                <a href="{% url 'product_detail' product.id %}" class="btn btn-secondary rounded-0">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
