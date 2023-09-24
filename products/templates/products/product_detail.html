@@ -28,6 +28,19 @@
                 </a>
                 {% endif %}
             </div>
+            <div class="review-form-container mb-4">
+                {% if user.is_authenticated %}
+                    <p class="text-white text-center d-none">Add a Review</p>
+                    <form class="review-form" method="post">
+                        {% csrf_token %}
+                        <p id="char-count">200 characters remaining</p>
+                        {{ form|crispy }}
+                        <input class="btn btn-light rounded-0 text-uppercase" type="submit" value="Submit Review">
+                    </form>
+                {% else %}
+                    <p>Sign In to leave a review.</p>
+                {% endif %}
+            </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5 text-white">
@@ -117,10 +130,45 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-lg-4 offset-lg-2">
+            {% if reviews %}
+            <h3 class="text-white">Product Reviews</h3>
+            {% endif %}
+            {% for review in reviews %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-white mb-0">By: {{ review.user.username }}</h5>
+                    <p class="text-gold mb-1">Rating: {{ review.rating }} / 5</p>
+                    <p class="card-text text-white mb-1">{{ review.content }}</p>
+                    <p class="text-muted mb-1">Posted on: {{ review.created_at|date:"d.m.Y, P" }}</p>
+                    {% if user.is_authenticated and user == review.user %}
+                        <a class="btn btn-danger rounded-0 text-uppercase" href="{% url 'delete_review' review.id %}">Delete Review</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center">No reviews yet</p>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<script>
+$(document).ready(function () {
+    $('textarea').on('input', function () {
+        var maxChars = $(this).attr('maxlength');
+        var remainingChars = maxChars - $(this).val().length;
+        if (remainingChars < 0) {
+            $(this).val($(this).val().substr(0, maxChars));
+            remainingChars = 0;
+        }
+        $('#char-count').text(remainingChars + ' characters remaining');
+    });
+});
+</script>
 {% endblock %}

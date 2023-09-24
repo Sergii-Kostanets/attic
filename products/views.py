@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 from django.core.paginator import Paginator
 
 
@@ -78,12 +78,34 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individul product details """
+    """ A view to show individul product details and handle reviews """
 
     product = get_object_or_404(Product, pk=product_id)
 
+    # Fetch all reviews associated with the product
+    reviews = Review.objects.filter(product=product).filter(approved=True)
+
+    if request.method == 'POST':
+        # Handle form submission for creating a new review
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.product = product
+            review.save()
+            messages.info(request, 'Review pended for approval')
+            return redirect('product_detail', product_id=product_id)
+        else:
+            messages.error(
+                request, 'Failed to add review. Please check the form.')
+
+    else:
+        form = ReviewForm()
+
     context = {
         'product': product,
+        'reviews': reviews,  # Pass the reviews to the template
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -178,3 +200,11 @@ def delete_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    if request.user == review.user:
+        review.delete()
+    return redirect('product_detail', product_id=review.product.id)

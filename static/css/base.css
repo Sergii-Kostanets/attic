@@ -21,6 +21,50 @@ hr {
     background-color: #333 !important;
 }
 
+/* Add styles for the star rating */
+
+#div_id_rating>div {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: flex-start; */
+    align-items: center;
+}
+
+.form-check input[type="radio"] {
+    display: none;
+}
+
+.form-check label {
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
+    margin-right: 5px;
+}
+
+/* .form-check label:before {
+    content: "\2605";
+} */
+
+.form-check input[type="radio"]:checked ~ label {
+    color: #e52;
+}
+
+.form-check {
+    padding: 0;
+}
+
+.review-form {
+    text-align: center;
+}
+
+#div_id_content>div>textarea {
+    height: 50px;
+    min-height: 50px;
+    max-height: 150px;
+    border-radius: 0;
+    max-width: 500px;
+}
+
 .btn.rounded-0.text-white.m-0.p-0.border-0 {
     padding: 3px 0 0 3px !important;
 }
