@@ -17,6 +17,49 @@ body {
     margin: 0px -8px;
 }
 
+hr {
+    background-color: #333 !important;
+}
+
+.btn.rounded-0.text-white.m-0.p-0.border-0 {
+    padding: 3px 0 0 3px !important;
+}
+
+.btn.rounded-0.text-white.m-0.p-0.border-0:hover,
+.btn.rounded-0.text-white.m-0.p-0.border-0:active,
+.btn.rounded-0.text-white.m-0.p-0.border-0:focus,
+.btn.rounded-0.text-white.m-0.p-0.border-0:focus-visible,
+.btn.rounded-0.text-white.m-0.p-0.border-0:visited {
+    color: gold !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.wishlist-form {
+    border: none !important;
+    outline: none !important;
+}
+
+.wishlist-image-container {
+    width: 200px;
+}
+
+.wishlist-remove-button {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.wishlist-remove-button:hover,
+.wishlist-remove-button:active,
+.wishlist-remove-button:focus,
+.wishlist-remove-button:focus-visible {
+    color: red !important;
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
 .card-img-top {
     border-radius: 0 !important;
 }
