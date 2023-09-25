@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| Draft Reviews{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay-product-detail"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-lg-4 offset-lg-2">
+            <h3 class="text-white mt-3">
+                {% if reviews %}
+                Draft Reviews
+                {% else %}
+                No Draft Reviews
+                {% endif %}
+            </h3>
+            <hr>
+            {% for review in reviews %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-white mb-0">By: {{ review.user.username }} about <a href="{% url 'product_detail' review.product.pk %}">{{ review.product.name }}</a></h5>
+                    <p class="text-gold mb-1">Rating: {{ review.rating }} / 5</p>
+                    <p class="card-text text-white mb-1">{{ review.content }}</p>
+                    <p class="text-muted mb-1">Posted on: {{ review.created_at|date:"d.m.Y, P" }}</p>
+                    <a data-toggle="modal" data-target="#staticBackdropDelete" class="btn btn-danger rounded-0 text-uppercase">Delete</a>
+                    <div class="modal fade" id="staticBackdropDelete" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropDeleteLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropDeleteLabel">Are you sure want to delete review</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    {{ review.content }}
+                                    <hr>
+                                    by {{ review.user.username }} about {{ review.product.name }}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary rounded-0 text-uppercase" data-dismiss="modal">Close</button>
+                                    <a class="btn btn-danger rounded-0 text-uppercase" href="{% url 'delete_review' review.id %}">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a data-toggle="modal" data-target="#staticBackdropApprove" class="btn btn-success rounded-0 text-uppercase">Approve</a>
+                    <div class="modal fade" id="staticBackdropApprove" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropApproveLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropApproveLabel">Are you sure want to approve review</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    {{ review.content }}
+                                    <hr>
+                                    by {{ review.user.username }} about {{ review.product.name }}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary rounded-0 text-uppercase" data-dismiss="modal">Close</button>
+                                    <a class="btn btn-success rounded-0 text-uppercase" href="{% url 'approve_review' review.id %}">Approve</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center">No Draft Reviews Yet</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

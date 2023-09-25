@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import user_passes_test
 
 
 def all_products(request):
@@ -205,6 +206,32 @@ def delete_product(request, product_id):
 @login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
+    if request.user.is_superuser:
+        review.delete()
+        return redirect('review_list')
     if request.user == review.user:
         review.delete()
-    return redirect('product_detail', product_id=review.product.id)
+        return redirect('product_detail', product_id=review.product.id)
+    else:
+        messages.error(request, 'Sorry, only the reviewer or a superuser can do that')
+        return redirect('home')
+
+
+@user_passes_test(lambda u: u.is_staff)  # Ensure only staff can access
+def review_list(request):
+    reviews = Review.objects.filter(approved=False).order_by('created_at')
+    return render(request, 'products/reviews_list.html', {'reviews': reviews})
+
+
+@user_passes_test(lambda u: u.is_staff)  # Ensure only staff can access
+def approve_review(request, review_id):
+    if not request.user.is_staff:
+        raise PermissionDenied
+    try:
+        review = Review.objects.get(pk=review_id)
+        review.approved = True
+        review.save()
+        messages.info(request, 'Review approved')
+    except Review.DoesNotExist:
+        pass
+    return redirect('review_list')  # Redirect to a page that lists reviews

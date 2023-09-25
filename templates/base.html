@@ -81,15 +81,20 @@
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
+                                    {% if user.is_authenticated %}
+                                    <p class="my-0">{{ user.username }}</p>
+                                    {% else %}
                                     <p class="my-0">My Account</p>
+                                    {% endif %}
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="{% url 'add_product' %}" class="dropdown-item">Create Product</a>
+                                        <a href="{% url 'review_list' %}" class="dropdown-item">Review List</a>
                                     {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
                                     <a href="{% url 'view_wishlist' %}" class="dropdown-item">Wishlist</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
                                 {% else %}
