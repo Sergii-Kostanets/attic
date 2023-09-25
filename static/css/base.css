@@ -21,6 +21,21 @@ hr {
     background-color: #333 !important;
 }
 
+#div_id_content {
+    width: 70%;
+    display: inline-block;
+}
+
+#div_id_rating {
+    width: 20%;
+    display: inline-block;
+}
+
+.review-form>input {
+    display: block;
+    margin: 0 auto;
+}
+
 /* Add styles for the star rating */
 
 #div_id_rating>div {
@@ -30,13 +45,13 @@ hr {
     align-items: center;
 }
 
-.form-check input[type="radio"] {
+#div_id_rating>div>.form-check input[type="radio"] {
     display: none;
 }
 
-.form-check label {
+#div_id_rating>div>.form-check label {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     color: #888;
     margin-right: 5px;
 }
@@ -45,11 +60,15 @@ hr {
     content: "\2605";
 } */
 
-.form-check input[type="radio"]:checked ~ label {
+#div_id_rating>div>.form-check input[type="radio"]:checked ~ label {
+    color: gold;
+}
+
+#div_id_rating>div>.form-check>label.form-check-label:hover {
     color: #e52;
 }
 
-.form-check {
+#div_id_rating>div>.form-check {
     padding: 0;
 }
 
@@ -58,12 +77,12 @@ hr {
 }
 
 #div_id_content>div>textarea {
-    height: 50px;
-    min-height: 50px;
-    max-height: 150px;
+    height: 130px;
+    min-height: 130px;
+    max-height: 130px;
     border-radius: 0;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 10px auto 0;
 }
 
 .btn.rounded-0.text-white.m-0.p-0.border-0 {
@@ -664,6 +683,16 @@ input[name='q']::placeholder {
     
     .confirmation-order-number {
         font-size: .6rem;
+    }
+
+    #div_id_content {
+        width: unset;
+        display: block;
+    }
+    
+    #div_id_rating {
+        width: unset;
+        display: block;
     }
 }
 

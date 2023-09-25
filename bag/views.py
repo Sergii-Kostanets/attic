@@ -7,6 +7,7 @@ from django.shortcuts import (
 )
 from django.contrib import messages
 from products.models import Product
+from .contexts import bag_contents
 
 
 def view_bag(request):
