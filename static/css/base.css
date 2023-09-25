@@ -21,14 +21,17 @@ hr {
     background-color: #333 !important;
 }
 
-#div_id_content {
-    width: 70%;
+#div_id_content,
+#div_id_rating {
     display: inline-block;
 }
 
+#div_id_content {
+    width: 70%;
+}
+
 #div_id_rating {
-    width: 20%;
-    display: inline-block;
+    width: 28%;
 }
 
 .review-form>input {
