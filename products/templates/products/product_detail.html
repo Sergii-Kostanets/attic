@@ -63,14 +63,16 @@
                     </a>
                 </p>
                 {% endif %}
-                {% if product.overall_rating %}
-                    <small class="text-muted text-gold">Users Rating <i class="fas fa-star mr-1"></i>{{ product.overall_rating }} / 5</small>
-                    <br>
-                {% endif %}
                 {% if product.rating %}
-                    <small class="text-muted text-gold">Our Rating <i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    <small class="text-muted text-gold"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5 - From Store</small>
                 {% else %}
-                    <small class="text-muted">No Rating</small>
+                    <small class="text-muted">No Rating From Store</small>
+                {% endif %}
+                <br>
+                {% if product.overall_rating %}
+                    <small class="text-muted text-gold"><i class="fas fa-star mr-1"></i>{{ product.overall_rating }} / 5 - From Reviews</small>
+                {% else %}
+                    <small class="text-muted">No Rating From Reviews</small>
                 {% endif %}
                 {% if request.user.is_superuser %}
                     <small class="ml-3">
