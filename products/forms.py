@@ -1,13 +1,22 @@
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category, Review
+from decimal import Decimal
 
 
 class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = '__all__'
+        exclude = ['size_category', 'overall_rating']  # Exclude the SizeCategory field
+
+    rating = forms.DecimalField(
+        label='Rating',
+        min_value=Decimal('0.00'),
+        max_value=Decimal('5.00'),
+        decimal_places=2,
+        widget=forms.NumberInput(attrs={'class': 'form-control'}),
+    )
 
     image = forms.ImageField(
         label='Image', required=False, widget=CustomClearableFileInput)

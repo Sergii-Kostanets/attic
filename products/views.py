@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Review
+from .models import Product, Category, Review, SizeCategory
 from .forms import ProductForm, ReviewForm
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import user_passes_test
@@ -122,7 +122,21 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save()
+            product = form.save(commit=False)
+
+            category_id = form.cleaned_data.get('category')
+
+            try:
+                size_category = SizeCategory.objects.get(
+                    category_id=category_id)
+                product.size_category = size_category
+                product.has_sizes = True
+            except SizeCategory.DoesNotExist:
+                # No size_category exists for this category
+                product.has_sizes = False
+
+            product.save()
+
             messages.info(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -148,10 +162,24 @@ def edit_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-            form.save()
+            product = form.save(commit=False)
+
+            category_id = form.cleaned_data.get('category')
+
+            try:
+                size_category = SizeCategory.objects.get(
+                    category_id=category_id)
+                product.size_category = size_category
+                product.has_sizes = True
+            except SizeCategory.DoesNotExist:
+                # No size_category exists for this category
+                product.has_sizes = False
+
+            product.save()
             messages.info(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -213,7 +241,8 @@ def delete_review(request, review_id):
         review.delete()
         return redirect('product_detail', product_id=review.product.id)
     else:
-        messages.error(request, 'Sorry, only the reviewer or a superuser can do that')
+        messages.error(request,
+                       'Sorry, only the reviewer or a superuser can do that')
         return redirect('home')
 
 

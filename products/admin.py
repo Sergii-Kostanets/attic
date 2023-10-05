@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, Review
+from .models import Product, Category, Review, SizeCategory, ProductSize
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -33,6 +33,16 @@ class ReviewAdmin(admin.ModelAdmin):
         queryset.update(approved=True)
 
 
+class SizeCategoryAdmin(admin.ModelAdmin):
+    list_display = ('category', 'name')
+
+
+class ProductSizeAdmin(admin.ModelAdmin):
+    list_display = ('size_category', 'name')
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Review, ReviewAdmin)
+admin.site.register(SizeCategory, SizeCategoryAdmin)
+admin.site.register(ProductSize, ProductSizeAdmin)

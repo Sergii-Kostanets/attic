@@ -13,6 +13,9 @@ class Category(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
+    def size_categories(self):
+        return SizeCategory.objects.filter(category=self)
+
     def __str__(self):
         return self.name
 
@@ -27,6 +30,8 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
+    size_category = models.ForeignKey(
+        'SizeCategory', null=True, blank=True, on_delete=models.SET_NULL)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
@@ -63,6 +68,22 @@ class Review(models.Model):
 
     def __str__(self):
         return f'Review by {self.user.username} on {self.product.name}'
+
+
+class SizeCategory(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    name = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.name
+
+
+class ProductSize(models.Model):
+    size_category = models.ForeignKey(SizeCategory, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 
 @receiver(post_save, sender=Review)
