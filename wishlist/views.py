@@ -23,7 +23,9 @@ def add_to_wishlist(request, product_id):
 
     # If the product is not in the wishlist, add it
     WishlistItem.objects.create(user=request.user, product=product)
-    return redirect('view_wishlist')
+    messages.info(
+        request, f'{product.name} successfuly added to the wishlist')
+    return redirect('product_detail', product_id=product_id)
 
 
 @login_required
