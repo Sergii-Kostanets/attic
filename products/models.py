@@ -71,6 +71,10 @@ class Review(models.Model):
 
 
 class SizeCategory(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Size categories'
+
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=254)
 
