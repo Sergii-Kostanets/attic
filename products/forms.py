@@ -8,11 +8,11 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        exclude = ['size_category', 'overall_rating']  # Exclude the SizeCategory field
+        exclude = ['size_category', 'overall_rating']
 
     rating = forms.DecimalField(
         label='Rating',
-        min_value=Decimal('0.00'),
+        min_value=Decimal('1.00'),
         max_value=Decimal('5.00'),
         decimal_places=2,
         widget=forms.NumberInput(attrs={'class': 'form-control'}),
