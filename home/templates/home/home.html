@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_title %}| Home{% endblock %}
+        
+{% block extra_meta %}
+<meta property="og:image" content="https://attic-test-images.s3.eu-west-1.amazonaws.com/android-chrome-512x512.png">
+{% endblock %}
 
 {% block page_header %}
 <div class="container header-container">
