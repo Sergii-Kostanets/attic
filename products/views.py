@@ -246,10 +246,13 @@ def delete_review(request, review_id):
         return redirect('home')
 
 
-@user_passes_test(lambda u: u.is_staff)  # Ensure only staff can access
 def review_list(request):
-    reviews = Review.objects.filter(approved=False).order_by('created_at')
-    return render(request, 'products/reviews_list.html', {'reviews': reviews})
+    if request.user.is_staff:
+        reviews = Review.objects.filter(approved=False).order_by('created_at')
+        return render(request, 'products/reviews_list.html', {'reviews': reviews})
+    else:
+        messages.error(request, 'Sorry, only staff members can access this page.')
+        return redirect('home')  # Redirect non-staff users to the home page or another appropriate page.
 
 
 @user_passes_test(lambda u: u.is_staff)  # Ensure only staff can access
