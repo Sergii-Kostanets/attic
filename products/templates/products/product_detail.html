@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_title %}| {{ product.name }}{% endblock %}
+        
+{% block extra_meta %}
+<meta property="og:title" content="{{ product.name }}">
+<meta property="og:description" content="{{ product.description }}">
+    {% if product.image %}
+        <meta property="og:image" content="{{ product.image.url }}">
+    {% else %}
+        <meta property="og:image" content="{{ MEDIA_URL }}noimage.png">
+    {% endif %}
+{% endblock %}
 
 {% block page_header %}
 <div class="container header-container">

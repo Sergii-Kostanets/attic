@@ -9,6 +9,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CEO -->
+        <meta name="description" content="Attic Shop - Your One-Stop Camera Store in Dublin, Ireland">
+        <meta name="keywords" content="camera, photography, equipment, lenses, accessories">
+        <meta name="author" content="Sergii Kostanets">
         {% endblock %}
         
         {% block extra_meta %}
@@ -49,6 +53,11 @@
     </head>
     <body>
         <header class="container-fluid fixed-top">
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-black text-white">
+                    <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
+                </div>            
+            </div>
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -130,11 +139,6 @@
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
-            <div id="delivery-banner" class="row text-center">
-                <div class="col bg-black text-white">
-                    <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
-                </div>            
-            </div>
         </header>
 
         {% if messages %}
@@ -207,16 +211,16 @@
                     <h3 class="text-white text-center my-3">Get to know us better</h3>
                     <div class="footer-links">
                         <p>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i> Follow us on Facebook</a>
+                            <a href="https://www.facebook.com/atticcamerashop/" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-square-facebook"></i> Follow us on Facebook</a>
                         </p>
                         <p>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i> Tag us on Instagram</a>
+                            <a href="https://www.instagram.com/cherdackshopblog/" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)"><i class="fa-brands fa-square-instagram"></i> Tag us on Instagram</a>
                         </p>
                         <p>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-github"></i> Created by Sergii Kostanets</a>
+                            <a href="https://github.com/Sergii-Kostanets" target="_blank"><i class="fa-brands fa-square-github" rel="noopener" aria-label="Visit creators page (opens in a new tab)"></i> Created by Sergii Kostanets</a>
                         </p>
                         <p>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-solid fa-file"></i> Privacy Policy</a>
+                            <a href="https://www.privacypolicygenerator.info/live.php?token=adajRuJvNQt8Ha9xD9xU8ZvmTDXKSZIV" target="_blank" rel="noopener" aria-label="Visit our Privacy Policy page (opens in a new tab)"><i class="fa-solid fa-file"></i> Privacy Policy</a>
                         </p>
                     </div>
                 </div>
