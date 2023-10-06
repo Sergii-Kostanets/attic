@@ -53,7 +53,7 @@ def all_products(request):
             all_products = all_products.filter(queries)
 
     # Create a Paginator instance with a specified number of products per page
-    paginator = Paginator(all_products, 48)
+    paginator = Paginator(all_products, 12)
 
     # Get the current page number from the request's GET parameters
     page = request.GET.get('page')
