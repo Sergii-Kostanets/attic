@@ -705,6 +705,11 @@ input[name='q']::placeholder {
     .message-container {
         right: 5px;
     }
+    
+    .form-control.rounded-0.w-50,
+    .form-group.w-50 {
+        width: 80% !important;
+    }
 }
 
 @media (max-width: 300px) {
@@ -759,5 +764,10 @@ input[name='q']::placeholder {
 
     .message-container {
         right: 0px;
+    }
+    
+    .form-control.rounded-0.w-50,
+    .form-group.w-50 {
+        width: 90% !important;
     }
 }
