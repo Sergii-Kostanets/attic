@@ -425,7 +425,7 @@ input[name='q']::placeholder {
 
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 122px;
     right: 15px;
     z-index: 999999;
 }
@@ -662,6 +662,10 @@ input[name='q']::placeholder {
         /* text-align: center; */
         margin-left: 15%;
     }
+
+    .message-container {
+        top: 102px;
+    }
 }
 
 @media (max-width: 444px) {
@@ -696,6 +700,10 @@ input[name='q']::placeholder {
     #div_id_rating {
         width: unset;
         display: block;
+    }
+
+    .message-container {
+        right: 5px;
     }
 }
 
@@ -747,5 +755,9 @@ input[name='q']::placeholder {
     .display-6 {
         font-size: 1rem !important;
         margin-top: 25px;
+    }
+
+    .message-container {
+        right: 0px;
     }
 }
