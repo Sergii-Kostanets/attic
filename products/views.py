@@ -7,6 +7,7 @@ from .models import Product, Category, Review, SizeCategory
 from .forms import ProductForm, ReviewForm
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import user_passes_test
+from django.core.exceptions import PermissionDenied
 
 
 def all_products(request):
