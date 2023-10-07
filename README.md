@@ -40,7 +40,9 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 
     * [Search](<#search>)
 
-    * [Sorting](<#sorting>)
+    * [Pagination](<#pagination>)
+
+    * [Products](<#products>)
 
 # Strategy
 
@@ -69,6 +71,8 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 - Experimental photographers
 - Fans of rare film cameras
 
+[Back to top](<#contents>)
+
 ## Business Model
 
 *Attic Shop* is designed as a minimalistic shop for cameras directly selling to the consumer (B2C). The user can order their products online and then the products will be shipped to them.
@@ -86,6 +90,8 @@ Descriptive urls have been used for the main site navigation to be more SEO frie
 File `robots.txt` created to improve SEO.
 
 File `sitemap.xml` created with [Free Online Sitemap Generator](https://www.xml-sitemaps.com/).
+
+[Back to top](<#contents>)
 
 ## Marketing
 
@@ -161,6 +167,8 @@ Models used (besides standard user model) in this project are:
 
 ![Database Schema Full](readme/images/database_schema_full.png)
 </details><br/>
+
+[Back to top](<#contents>)
 
 # **User Experience (UX)**
 
@@ -319,6 +327,8 @@ This is a convenient way to search for products of interest. It's available on a
 ![Search](readme/images/search.png)
 </details><br/>
 
+[Back to top](<#contents>)
+
 ### **Sorting**
 
 There are to ways to sort products.
@@ -390,3 +400,16 @@ There are to ways to sort products.
 
 ![Sorting Dropdown opened](readme/images/sort_dropdown_opened.png)
 </details><br/>
+
+[Back to top](<#contents>)
+
+### **Pagination**
+Pagination has buttons: *first page*, *previous page*, *next page*, and *last page*. Pagination takes into account search results and when turning pages, only the page corresponding to the search results is flipped.
+
+<details><summary><b>Pagination</b></summary>
+
+![Pagination](readme/images/pagination.png)
+</details><br/>
+
+### **Products**
+
