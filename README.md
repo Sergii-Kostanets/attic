@@ -17,10 +17,16 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
     * [Site Owner Goals](<#site-owner-goals>)
     
     * [Target Audience](#target-audience)
+    
+    * [Business Model](#business-model)
+    
+    * [SEO](#seo)
+    
+    * [Marketing](#marketing)
 
-## Strategy
+# Strategy
 
-### Site User Goals
+## Site User Goals
 
 - Selecting products
 - Searching for products
@@ -29,7 +35,7 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 - Review product
 - Add product to the wishlist
 
-### Site Owner Goals
+## Site Owner Goals
 
 - Sell products
 - Get people to subscribe
@@ -38,9 +44,67 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 - Edit products
 - Delete products
 
-### Target Audience
+## Target Audience
 
 - Professional photographers
 - Amateur photographers
 - Experimental photographers
 - Fans of rare film cameras
+
+## Business Model
+
+*Attic* is designed as a minimalistic shop for cameras directly selling to the consumer (B2C). The user can order their products online and then the products will be shipped to them.
+
+There is the subscribtion for the future for discounts and the newsletter with information about new cameras, lenses and accessories.
+
+The most popular social platforms Facebook and Instagram are used to communicate with potential buyers.
+
+## SEO
+
+Keywords, title and description meta tags have been added for SEO.
+
+Descriptive urls have been used for the main site navigation to be more SEO friendly.
+
+File `robots.txt` created to improve SEO.
+
+File `sitemap.xml` created with [Free Online Sitemap Generator](https://www.xml-sitemaps.com/).
+
+## Marketing
+
+### Facebook
+
+There is a Facebook page for *Attic*. The shop can post new products and advertise discounts with the Facebook instruments.
+
+[View live Attic Facebook page here](https://www.facebook.com/atticcamerashop/)
+
+<details><summary><b>Facebook Page</b></summary>
+
+![Facebook Page](readme/images/facebook.png)
+</details><br/>
+
+### Instagram
+
+There is an Instagram page for *Attic*. The shop can post new products and advertise discounts with the Instagram instruments.
+
+[View live Attic Instagram page here](https://www.instagram.com/cherdackshopblog/)
+
+<details><summary><b>Instagram Page</b></summary>
+
+![Instagram Page](readme/images/instagram.png)
+</details><br/>
+
+### Newsletter
+
+Users can subscribe to a newsletter to stay up to date with what is happening and get dicounts. Service provided by [Mailchimp](https://mailchimp.com/).
+
+<details><summary><b>Newsletter</b></summary>
+
+![Newsletter](readme/images/newsletter.png)
+</details><br/>
+
+### Additional
+
+There is the possibilities for more social media pages and running google ads to increase visibility.
+Contests could be hosted to win prices and bring more people to join the newsletter.
+
+
