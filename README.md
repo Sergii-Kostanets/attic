@@ -413,3 +413,10 @@ Pagination has buttons: *first page*, *previous page*, *next page*, and *last pa
 
 ### **Products**
 
+This page lists all the products that has been create at *Attic Shop*. For signed in and not signed in users this page looks the same. The page shows 12 cards before a pagination mechanism kicks in.
+
+<details><summary><b>Products</b></summary>
+
+![Products](readme/images/products.png)
+</details><br/>
+
