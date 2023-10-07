@@ -34,6 +34,14 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 
     * [Design Choices](<#design-choices>)
 
+* [**Existing Features**](<#existing-features>)
+
+    * [Navigation](<#navigation>)
+
+    * [Search](<#search>)
+
+    * [Sorting](<#sorting>)
+
 # Strategy
 
 ## Site User Goals
@@ -234,4 +242,151 @@ The font used for the site are one of the most popular fonts: 'Lato'. Lato is a 
 
 [Back to top](<#contents>)
 
+## **Existing Features**
 
+### **Navigation**
+The navigation bar is very clean and straight forward. Depending if you are signed in or not different menus are visible for the site user. An extra menu item is visible if you are signed in as an administrator.
+
+* Promotion Bar - Latest promotion at the *Attic Shop*
+
+<details><summary><b>Promotion Bar</b></summary>
+
+![Promotion Bar](readme/images/nav_promotion.png)
+</details><br/>
+
+*Links that are visible to signed out users*
+
+* Logo - Link to a Home Page.
+* Dropdown Menu:
+    * Sign Up - Gives the user the opportunity to sign up at the *Attic Shop*.
+    * Sign In - Gives the user the opportunity to sign in a registered user at the *Attic Shop*.
+* Shopping Bag - Lists of products ready for purchase.
+
+<details><summary><b>Navigation Desktop - User Signed Out</b></summary>
+
+![Navigation Desktop - User Signed Out](readme/images/navbar_desktop_signed_out.png)
+</details><br/>
+
+<details><summary><b>Navigation Mobile - User Signed Out</b></summary>
+
+![Navigation Mobile - User Signed Out](readme/images/navbar_mobile_signed_out.png)
+</details><br/>
+
+*Links that are visible to signed in users*
+
+* Logo - Link to a Home Page.
+* Username dropdown list:
+    * Profile - Shows signed in users profile page.
+    * Wishlist - Lists all products added to the wishlist.
+    * Sign out - Logs out the user.
+* Shopping Bag - Lists of products ready for purchase.
+
+<details><summary><b>Navigation Desktop - User Signed In</b></summary>
+
+![Navigation Desktop - User Signed In](readme/images/navbar_desktop_user_signed_in.png)
+</details><br/>
+
+<details><summary><b>Navigation Mobile - User Signed In</b></summary>
+
+![Navigation Mobile Blog - User Signed In](readme/images/navbar_mobile_user_signed_in.png)
+</details><br/>
+
+*Link that is visible if user is administrator*
+
+All of the links above plus the ones below.
+
+* Create Product - From for adding a new product.
+* Review List - Lists all draft reviews pending approval.
+
+<details><summary><b>Navigation Desktop - Admin signed In</b></summary>
+
+![Navigation Desktop - Admin signed In](readme/images/navbar_desktop_admin_signed_in.png)
+</details><br/>
+
+<details><summary><b>Navigation Mobile Blog - Admin / Staff signed In</b></summary>
+
+![Navigation Mobile - Admin signed In](readme/images/navbar_mobile_admin_signed_in.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Search**
+
+This is a convenient way to search for products of interest. It's available on all pages showing the list of products for everyone.
+
+<details><summary><b>Search</b></summary>
+
+![Search](readme/images/search.png)
+</details><br/>
+
+### **Sorting**
+
+There are to ways to sort products.
+
+#### Sorting links under the main navigation panel
+
+* All Products
+    * By Price
+    * By Rating
+    * All Products
+
+<details><summary><b>Sorting All Products</b></summary>
+
+![Sorting All Products](readme/images/sort_all_products.png)
+</details><br/>
+
+* Cameras
+    * Digital Cameras
+    * Film Cameras
+    * All Cameras
+
+<details><summary><b>Sorting Cameras</b></summary>
+
+![Sorting Cameras](readme/images/sort_cameras.png)
+</details><br/>
+
+* Lenses
+    * Lenses
+    * Adapters & Caps
+    * Lenses & Accessories
+
+<details><summary><b>Sorting Lenses</b></summary>
+
+![Sorting Lenses](readme/images/sort_lenses.png)
+</details><br/>
+
+* Accessories
+    * Specials
+    * Tripods
+    * Caps
+    * Adapters
+    * Flashlights
+    * Other Accessories
+    * All Accessories
+
+<details><summary><b>Sorting Accessories</b></summary>
+
+![Sorting Accessories](readme/images/sort_accessories.png)
+</details><br/>
+
+#### Sorting dropdown menu at the Products Page
+
+* Sort by...
+* Price (low to high)
+* Price (high to low)
+* Rating (low to high)
+* Rating (high to low)
+* Name (A-Z)
+* Name (Z-A)
+* Category (A-Z)
+* Category (Z-A)
+
+<details><summary><b>Sorting Dropdown closed</b></summary>
+
+![Sorting Dropdown closed](readme/images/sort_dropdown_closed.png)
+</details><br/>
+
+<details><summary><b>Sorting Dropdown opened</b></summary>
+
+![Sorting Dropdown opened](readme/images/sort_dropdown_opened.png)
+</details><br/>
