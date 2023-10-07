@@ -3,10 +3,9 @@ html {
 }
 
 body {
-    /* height: calc(100vh - 164px); */
     height: 100vh;
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Lato', 'sans-serif';
     display: flex;
     flex-direction: column;
 }
