@@ -43,7 +43,7 @@ class ReviewForm(forms.ModelForm):
     rating = forms.ChoiceField(
         label=False,
         choices=RATING_CHOICES,
-        widget=forms.RadioSelect(attrs={'class': 'star-rating'}),
+        widget=forms.RadioSelect,
     )
 
     content = forms.CharField(

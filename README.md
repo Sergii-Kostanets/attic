@@ -88,6 +88,24 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 
     * [Libraries](<#libraries>)
 
+* [**Testing**](<#testing>)
+
+    * [Testing User Stories](<#testing-user-stories>)
+
+    * [Code Validation](<#code-validation>)
+    
+    * [Manual Testing](<#manual-testing>)
+    
+    * [Responsiveness Test](<#responsiveness-test>)
+    
+    * [Browser Compatibility](<#browser-compatibility>)
+    
+    * [Lighthouse](<#lighthouse>)
+    
+    * [Peer Review](<#peer-review>)
+
+    * [Known Bugs](<#known-bugs>)
+
 # Strategy
 
 ## Site User Goals
@@ -240,7 +258,7 @@ Below the user stories for the project are listed to clarify why particular feat
 | As a Site User | I can write a review so that I can share my opinion about the product | &check; |
 | As a Site User | I can sort products by different characteristics so that I can easily choose product I want to buy | &check; |
 | As a Site User | I can rate the product so that I can influence on product raiting | &check; |
-| As a Site User | I can view specific cetegory so that I can look for products only in that category | &check; |
+| As a Site User | I can view specific category so that I can look for products only in that category | &check; |
 | As a Site User | I can remove item from the bag so that I can discard bying them | &check; |
 | As a Site User | I can see massages about editing my shopping bag so that I can confim success of my actions | &check; |
 | As a Site User | I can see products in the bag in the success message so that I can be sure product is added or removed from the bag | &check; |
@@ -749,5 +767,107 @@ can parse and dump into the DOT language used by GraphViz, is written in pure Py
 * [typing_extensions](https://pypi.org/project/typing-extensions/) - The typing_extensions module serves two related purposes: Enable use of new type system features on older Python versions. For example, typing.TypeGuard is new in Python 3.10, but typing_extensions allows users on previous Python versions to use it too. Enable experimentation with new type system PEPs before they are accepted and added to the typing module.
 * [urllib3](https://pypi.org/project/urllib3/) - Urllib3 is a powerful HTTP client library for Python. It provides a high-level interface for making HTTP requests, handling headers, cookies, redirects, and other aspects of the HTTP protocol.
 * [wrapt](https://pypi.org/project/wrapt/) - The aim of the wrapt module is to provide a transparent object proxy for Python, which can be used as the basis for the construction of function wrappers and decorator functions.
+
+[Back to top](<#contents>)
+
+# Testing
+
+## Testing User Stories
+
+### Site User
+
+| Role | Test case / Result |  |
+|:-------:|:--------|:--------|
+| As a Site User | I can view a list of products so that I can select one to view | &check; |
+|  | By clicking on the all products or shop now button or by entering /products in the URL, the user goes to a page with a list of all products |  |
+| As a Site User | I can view a paginated list of products so that easily select a page to view | &check; |
+|  | The User is able to navigate trough products pages with the buttins: next page, last page, previous page, and first page |  |
+| As a Site User | I can click on a product so that I can read the full description | &check; |
+|  | User is able to click on the product image to go to the product detail page |  |
+| As a Site User | I can register an account so that I can use additional functionality | &check; |
+|  | An anonymous user sees a Sign Up button, clicking on which is redirected to the registration page |  |
+| As a Site User | I can sign out from the site so that I can be safe that nobody can access my information | &check; |
+|  | The logged-in user sees a Sign Out button, which is signing user out after confirmation |  |
+| As a Site User | I can search for products so that I can filter products that match my interests | &check; |
+|  | User can enter request to the search input and filter products |  |
+| As a Site User | I can edit amount of product items so that I can add this amount to the bag at once | &check; |
+|  | User is able to edit number of items on the product detail page |  |
+| As a Site User | I can add products to the shopping bag so that I can buy them later | &check; |
+|  | User can click add to bag button to add product to the bag |  |
+| As a Site User | I can edit amount of product items in the bag so that I can buy this amount at once | &check; |
+|  | User can edit number of items in the bag |  |
+| As a Site User | I can add products to the wishlist so that I can add them to the shopping bag later | &check; |
+|  | Clicking to add to wishlist button will add product to the wishlist |  |
+| As a Site User | I can see my profile so that I can edit my delivery details | &check; |
+|  | User can edit their details on profile page, by clicking profile button in the dropdown menu of the main navigation panel |  |
+| As a Site User | I can see order history so that I can control my purchases | &check; |
+|  | After purchase user can see details about it on profile page |  |
+| As a Site User | I can go to chackout page so that I can make a payment | &check; |
+|  | On shopping bag page clicking secure checkout button user gets to the checkout page for payment |  |
+| As a Site User | I can see order information page so that I have confirmation of payment | &check; |
+|  | After purchase user can see details about their order |  |
+| As a Site User | I can write a review so that I can share my opinion about the product | &check; |
+|  | User can add a review on product detail page |  |
+| As a Site User | I can sort products by different characteristics so that I can easily choose product I want to buy | &check; |
+|  | User can choose sort type on product list page |  |
+| As a Site User | I can rate the product so that I can influence on product raiting | &check; |
+|  | User can vote to rate the product |  |
+| As a Site User | I can view specific category so that I can look for products only in that category | &check; |
+|  | User can choose category from navigation panel to filter products by this category |  |
+| As a Site User | I can remove item from the bag so that I can discard bying them | &check; |
+|  | In the shopping bag user can click the remove button on each product to delete it from the bag |  |
+| As a Site User | I can see massages about editing my shopping bag so that I can confim success of my actions | &check; |
+|  | User can see messsage after adding, editing or deleting product from shopping bag |  |
+| As a Site User | I can see products in the bag in the success message so that I can be sure product is added or removed from the bag | &check; |
+|  | Success message has a list of products are currently in the bag |  |
+| As a Site User | I can enter payment information so that I can check out | &check; |
+|  | User can enter payment information in the special field formatted for this |  |
+| As a Site User | I can be sure my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase | &check; |
+|  | User provides all information being logged, without access to it another users |  |
+| As a Site User | I can receive an email confirmation after checking out so that I can keep the information of what I've purchased for my records | &check; |
+|  | User gets an email after successful payment for theirs order |  |
+| As a Site User | I can get an email confirmation so that I can be sure my order details is saved | &check; |
+|  | User gets an email with order details after payment |  |
+
+### Site Owner
+
+| Role | Test case / Result |  |
+|:-------:|:--------|:--------|
+| As a Store Owner | I can add a product to the store so that I can expand the range of products | &check; |
+|  | Store Owner can create new products in the form accessable by Create Product link in the dropdown menu |  |
+| As a Store Owner | I can edit a product so that I can keep a product up to date | &check; |
+|  | Store Owner can edit product by clicking Edit link at product card |  |
+| As a Store Owner | I can delete a product so that I can remove irrelevant products | &check; |
+|  | Store Owner can delete products by clicking Delete link at product card |  |
+| As a Store Owner | I can approve draft reviews so that I can keep reviews polite and actual | &check; |
+|  | Site owner can access Draft Reviews List page by Review List button in dropdown account menu and delete or approve each draft review |  |
+
+[Back to top](<#contents>)
+
+## Code Validation
+The code on the *Atic Shop* site has been tested through [W3C HTML Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [JS hint Validator](https://jshint.com/). There are no errors found.
+
+### HTML Validation
+When validating my own code the [W3C HTML Validator](https://validator.w3.org/) eports no errors.
+
+<details><summary><b>HTML Validation Result Home page</b></summary>
+
+![HTML Validation Result Home page](readme/images/html_validation_home.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Products page</b></summary>
+
+![HTML Validation Result Products page](readme/images/html_validation_products.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Product Detail page</b></summary>
+
+![HTML Validation Result Product Detail page](readme/images/html_validation_product_detail.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Shopping Bag page</b></summary>
+
+![HTML Validation Result Shopping Bag page](readme/images/html_validation_bag.png)
+</details><br/>
 
 [Back to top](<#contents>)

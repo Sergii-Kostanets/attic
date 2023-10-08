@@ -41,9 +41,6 @@ hr {
 /* Add styles for the star rating */
 
 #div_id_rating>div {
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: flex-start; */
     align-items: center;
 }
 
@@ -57,10 +54,6 @@ hr {
     color: #888;
     margin-right: 5px;
 }
-
-/* .form-check label:before {
-    content: "\2605";
-} */
 
 #div_id_rating>div>.form-check input[type="radio"]:checked ~ label {
     color: gold;
@@ -227,14 +220,8 @@ i.fa-solid.fa-file {
     border-radius: 0 !important;
 }
 
-/* .refferal_badge {
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 /* from Bulma */
+
 .icon {
     align-items: center;
     display: inline-flex;
