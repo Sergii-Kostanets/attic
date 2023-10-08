@@ -1125,3 +1125,17 @@ Additional testing of the application was conducted by people outside of the sof
 
 ## Known bugs
 No known bugs besides those in the fixed / unfixed bugs section.
+
+### Fixed Bugs
+
+* Bug: low accessibility because of buttons. Solution: add `aria-label` to describe button.
+
+* Bug: HTML Validation shows errors about dublicating id's. Solution: add product primary keys to id's, or change id's to classes.
+
+### Unfixed Bugs
+
+* Bug: message success always shows shopping bag contents. Temporary solution: use message info instead.
+
+* Bug: forget password doesn't work yet. Temporary solution: disable forget password functionality.
+
+[Back to top](<#contents>)
