@@ -964,3 +964,118 @@ The [JS hint Validator](https://jshint.com/) results can be seen below. No criti
 </details><br/>
 
 [Back to top](<#contents>)
+
+## Manual Testing
+
+In addition to tests stated above I have performed a series of manual tests. Below the list of tests that has been conducted can be found.
+
+| Status | **Main Website - User Signed Out**
+|:-------:|:--------|
+| &check; | Typing in a incorrect URL on the page loads the 404 error page
+| &check; | Pasting page that needs authentication shows message that page is forbodden, loads a forbidden page or if this page accessable for sined in users - to the sign in page
+| &check; | Clicking the nav logo loads the home page
+| &check; | Clicking the shop now button loads the products page and lists all products
+| &check; | Clicking the sorting button under the main navigation panel lists products and sorted accordingly
+| &check; | Clicking the Sign In loads the sign in page
+| &check; | Clicking the Sign Up loads the sign up page
+| &check; | 12 products are rendered for the user on *Products* page before pagination kicks in
+| &check; | Clicking the on the product card image loads the product detail page
+| &check; | In the product details view the user cannot create a review and vote for rating
+| &check; | In the post detail view the signed in user cannot add product to the wishlist
+| &check; | The search input works as expected
+| &check; | There is no access to the /admin page
+| &check; | Clicking the Facebook link in the footer area opens Facebook page in a new window
+| &check; | Clicking the Instagram link in the footer area opens Instagram page in a new window
+| &check; | Clicking the GitHub link in the footer area opens GitHub page in a new window
+| &check; | Clicking the Privacy Policy link in the footer area opens Privacy Policy in a new window
+
+| Status | **Main Website - User Signed In**
+|:-------:|:--------|
+| &check; | Typing in a incorrect URL on the page loads the 404 error page
+| &check; | Pasting page that needs administrator rights loads a forbidden page
+| &check; | Clicking the nav logo loads the home page
+| &check; | Clicking the shop now button loads the products page and lists all products
+| &check; | Clicking the sorting button under the main navigation panel lists products and sorted accordingly
+| &check; | 12 products are rendered for the user on *Products* page before pagination kicks in
+| &check; | Clicking the on the product card image loads the product detail page
+| &check; | In the product details view the user can create a review and vote for rating
+| &check; | When user submits a review a message with approval information is being showed on the page
+| &check; | In the product detail view the signed in user can delete the review created by themselves
+| &check; | In the post detail view the signed in user can add product to the wishlist
+| &check; | Clicking the Profile button in the signed in user menu loads the My Profile page
+| &check; | There is no access to the /admin page
+| &check; | Clicking the Facebook link in the footer area opens Facebook page in a new window
+| &check; | Clicking the Instagram link in the footer area opens Instagram page in a new window
+| &check; | Clicking the GitHub link in the footer area opens GitHub page in a new window
+| &check; | Clicking the Privacy Policy link in the footer area opens Privacy Policy in a new window
+
+| Status | **Main Website - Admin signed In**
+|:-------:|:--------|
+| &check; | Clicking the Create Product button in the signed in user menu loads the Create Product page
+| &check; | Clicking the Review List button in the signed in user menu loads the Draft Reviews page
+| &check; | The edit and delete buttons is visible in post detail view and leads to editing and delete confirmation
+| &check; | The edit and delete buttons is visible in products page and leads to editing and delete confirmation
+| &check; | The approve and delete buttons is visible in review list and leads to confirmation of deleteng or approving a review
+| &check; | There is an access to the /admin page
+
+ Status | **Create / Edit A Product - Admin signed In**
+|:-------:|:--------|
+| &check; | Category field is not required
+| &check; | Sku field is not required
+| &check; | Name field is required
+| &check; | Name field does not accept just spaces
+| &check; | Description field is required
+| &check; | Description field does not accept just spaces
+| &check; | Has sizes field is not required
+| &check; | Price field is required
+| &check; | Price field does not accept just spaces, cannot be more than 6 digits
+| &check; | Rating field is required
+| &check; | Rating field does not accept just spaces, should be from 1.00 to 5.00
+| &check; | Image url field is not required
+
+Status | **Create A New User - User signed Out**
+|:-------:|:--------|
+| &check; | Email fields is required
+| &check; | Email fields does not accept empty field
+| &check; | Email fields does not accept just spaces
+| &check; | Username field is required
+| &check; | Username field does not accept empty field
+| &check; | Username field does not accept just spaces
+| &check; | Password fields is required
+| &check; | Password fields do not accept empty field
+| &check; | Password fields do not accept just spaces
+| &check; | Success flash message is displayed when the user submits a new user form
+
+[Back to top](<#contents>)
+
+## Responsiveness Test
+The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Am I Responsive](https://ui.dev/amiresponsive/).
+
+| Desktop    | Display <1280px       | Display >1280px    |
+|------------|-----------------------|--------------------|
+| Render     | pass                  | pass               |
+| Images     | pass                  | pass               |
+| Links      | pass                  | pass               |
+
+| Tablet     | Samsung Galaxy Tab 10 | Amazon Kindle Fire | iPad Mini | iPad Pro |
+|------------|-----------------------|--------------------|-----------|----------|
+| Render     | pass                  | pass               | pass      | pass     |
+| Images     | pass                  | pass               | pass      | pass     |
+| Links      | pass                  | pass               | pass      | pass     |
+
+| Phone      | Galaxy S5/S6/S7       | iPhone 6/7/8       | iPhone 12pro         |
+|------------|-----------------------|--------------------|----------------------|
+| Render     | pass                  | pass               | pass      | pass     |
+| Images     | pass                  | pass               | pass      | pass     |
+| Links      | pass                  | pass               | pass      | pass     |
+
+[Back to top](<#contents>)
+
+## Browser Compatibility
+* Google Chrome (version 114.0.5735.198)
+* Mozilla Firefox (version 114.0.1)
+* Opera (version 91.0.4516.20)
+* Apple Safari (version 16.5.1)
+* Microsoft Edge (version 114.0.1823.67)
+
+[Back to top](<#contents>)
