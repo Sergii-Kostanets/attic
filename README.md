@@ -80,7 +80,13 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 
 * [**Features Left to Implement**](<#features-left-to-implement>)
 
+* [**Technologies Used**](<#technologies-used>)
 
+    * [Languages](<#languages>)
+
+    * [Frameworks & Software](<#frameworks--software>)
+
+    * [Libraries](<#libraries>)
 
 # Strategy
 
@@ -667,9 +673,81 @@ The sites incorporates flash messages when an action has been performed (i.e. cr
 
 [Back to top](<#contents>)
 
+# Technologies Used
 
+## Languages
 
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the site.
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
 
+## Frameworks & Software
+* [Bootstrap](https://getbootstrap.com/) - A CSS framework that helps building solid, responsive, mobile-first sites
+* [Django](https://www.djangoproject.com/) - A model-view-template framework used to create the Review | Alliance site
+* [GitHub](https://github.com/) - Used to control versions of the website.
+* [GitBash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) - Terminal used to push changes to the GitHub repository.
+* [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test performance of site.
+* [Am I Responsive](https://ui.dev/amiresponsive/) - Used for responsiveness check.
+* [Graph Models](https://django-extensions.readthedocs.io/en/latest/graph_models.html) - Used to create a *.png file of all models in the project.
+* [Favicon](https://favicon.io/) - Used to create the favicon.
+* [VSCode](https://code.visualstudio.com/) - Used to create and edit the site.
+* [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to debug and test responsiveness.
+* [Amazon Web Services](https://aws.amazon.com/) - A service S3 that hosts all static files in the project.
+* [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
+* [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
+* [CI Python Linter](https://pep8ci.herokuapp.com/) - the PEP8 Online Validaton service form Codeinstitute.
+* [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code
 
+[Back to top](<#contents>)
 
+## Libraries
 
+The libraries used in this project are located in the requirements.txt file and have been documented below
+
+* [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+* [astroid](https://pypi.org/project/astroid/) - The aim of this module is to provide a common base representation of python source code. It is currently the library powering pylint’s capabilities.
+* [boto3](https://pypi.org/project/boto3/) - BBoto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.
+* [botocore](https://pypi.org/project/botocore/) - A low-level interface to a growing number of Amazon Web Services. The botocore package is the foundation for the AWS CLI as well as boto3.
+* [certifi](https://pypi.org/project/certifi/) - Certifi is a Python package that provides a curated collection of Root Certificates for validating the trustworthiness of SSL/TLS connections.
+* [charset-normalizer](https://pypi.org/project/charset-normalizer/) - Charset Normalizer is a Python library that helps normalize and detect the character encoding of text. It provides functions to handle and convert text between different character encodings.
+* [defusedxml](https://pypi.org/project/defusedxml/) - DefusedXML is a library that provides modified versions of the standard Python XML libraries to mitigate various security vulnerabilities. It helps protect against XML attacks such as entity expansion, external entity injection, and other XML parsing vulnerabilities.
+* [dj-database-url](https://pypi.org/project/dj-database-url/) - Django Database URL is a Django module that allows you to utilize environment variables or a URL to configure your database settings. It provides a convenient way to manage and switch between different database configurations.
+* [Django](https://pypi.org/project/Django/) - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+* [django-allauth](https://pypi.org/project/django-allauth/) - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+* [django-countries](https://pypi.org/project/django-countries/) - A Django application that provides country choices for use with forms, flag icons static files, and a country field for models.
+* [django-crispy-forms](https://pypi.org/project/django-crispy-forms/) - Used to integrate Django DRY forms in the project.
+* [django-extensions](https://pypi.org/project/django-extensions/) - Django Extensions is a collection of custom extensions for the Django Framework.
+* [django-storages](https://pypi.org/project/django-storages/) - Django Storages is a project to provide a variety of storage backends in a single library.
+* [flake8](https://pypi.org/project/flake8/) - Flake8 is a wrapper around these tools: PyFlakes, pycodestyle, Ned Batchelder’s McCabe script. Flake8 runs all the tools by launching the single flake8 command. It displays the warnings in a per-file, merged output.
+* [flake8-django](https://pypi.org/project/flake8-django/) - A flake8 plugin to detect bad practices on Django projects.
+* [gunicorn](https://pypi.org/project/gunicorn/) - Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.
+* [idna](https://pypi.org/project/idna/) - IDNA (Internationalized Domain Names in Applications) is a Python library that provides support for working with internationalized domain names. It helps encode and decode domain names to and from ASCII-compatible encoding.
+* [jmespath](https://pypi.org/project/jmespath/) - JMESPath (pronounced “james path”) allows to declaratively specify how to extract elements from a JSON document.
+* [lazy-object-proxy](https://pypi.org/project/lazy-object-proxy/) - A fast and thorough lazy object proxy.
+* [mccabe](https://pypi.org/project/mccabe/) - Ned’s script to check McCabe complexity. This module provides a plugin for flake8, the Python code checker.
+* [oauthlib](https://pypi.org/project/oauthlib/) - OAuthLib is a framework which implements the logic of OAuth1 or OAuth2 without assuming a specific HTTP request object or web framework.
+* [packaging](https://pypi.org/project/packaging/) - Reusable core utilities for various Python Packaging interoperability specifications.
+* [Pillow](https://pypi.org/project/Pillow/) - The Python Imaging Library adds image processing capabilities to your Python interpreter. This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
+* [psycopg2](https://pypi.org/project/psycopg2/) - Psycopg is the most popular PostgreSQL database adapter for the Python programming language. Its main features are the complete implementation of the Python DB API 2.0 specification and the thread safety (several threads can share the same connection). It was designed for heavily multi-threaded applications that create and destroy lots of cursors and make a large number of concurrent “INSERT”s or “UPDATE”s.
+* [pycodestyle](https://pypi.org/project/pycodestyle/) - It is a tool to check Python code against some of the style conventions in PEP 8.
+* [pydot](https://pypi.org/project/pydot/) - It is an interface to Graphviz
+can parse and dump into the DOT language used by GraphViz, is written in pure Python, and networkx can convert its graphs to pydot.
+* [pyflakes](https://pypi.org/project/pyflakes/) - A simple program which checks Python source files for errors. Pyflakes analyzes programs and detects various errors. It works by parsing the source file, not importing it, so it is safe to use on modules with side effects. It’s also much faster.
+* [pygraphviz](https://pypi.org/project/pygraphviz/) - PyGraphviz is a Python interface to the Graphviz graph layout and visualization package. With PyGraphviz you can create, edit, read, write, and draw graphs using Python to access the Graphviz graph data structure and layout algorithms.
+* [pyparsing](https://pypi.org/project/pyparsing/) - The pyparsing module is an alternative approach to creating and executing simple grammars, vs. the traditional lex/yacc approach, or the use of regular expressions. The pyparsing module provides a library of classes that client code uses to construct the grammar directly in Python code.
+* [python-dateutil](https://pypi.org/project/python-dateutil/) - The dateutil module provides powerful extensions to the standard datetime module, available in Python.
+* [python3-openid](https://pypi.org/project/python3-openid/) - OpenID support for modern servers and consumers.
+* [pytz](https://pypi.org/project/pytz/) - This is a set of Python packages to support use of the OpenID decentralized identity system in your application, update to Python 3.
+* [requests](https://pypi.org/project/requests/) - Requests is a popular Python library for making HTTP requests. It provides a simple and intuitive interface for sending HTTP/1.1 requests, handling responses, and working with HTTP sessions.
+* [requests-oauhlib](https://pypi.org/project/requests-oauthlib/) - Provides first-class OAuth library support for Requests.
+* [s3transfer](https://pypi.org/project/s3transfer/) - S3transfer is a Python library for managing Amazon S3 transfers. This project is maintained and published by Amazon Web Services.
+* [six](https://pypi.org/project/six/) - Six is a Python module that provides a compatibility layer for bridging differences between Python 2 and Python 3. It allows developers to write code that works across both versions of Python.
+* [sqlparse](https://pypi.org/project/sqlparse/) - sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+* [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
+* [typing_extensions](https://pypi.org/project/typing-extensions/) - The typing_extensions module serves two related purposes: Enable use of new type system features on older Python versions. For example, typing.TypeGuard is new in Python 3.10, but typing_extensions allows users on previous Python versions to use it too. Enable experimentation with new type system PEPs before they are accepted and added to the typing module.
+* [urllib3](https://pypi.org/project/urllib3/) - Urllib3 is a powerful HTTP client library for Python. It provides a high-level interface for making HTTP requests, handling headers, cookies, redirects, and other aspects of the HTTP protocol.
+* [wrapt](https://pypi.org/project/wrapt/) - The aim of the wrapt module is to provide a transparent object proxy for Python, which can be used as the basis for the construction of function wrappers and decorator functions.
+
+[Back to top](<#contents>)
