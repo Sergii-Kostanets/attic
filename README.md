@@ -44,6 +44,44 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 
     * [Products](<#products>)
 
+    * [Wishlist](<#wishlist>)
+
+    * [Shopping Bag](<#shopping-bag>)
+
+    * [Checkout Page](<#checkout-page>)
+
+    * [Order Confirmation Page](<#order-confirmation-page>)
+
+    * [Profile Page](<#profile-page>)
+
+    * [Reviews](<#reviews>)
+
+    * [Rating](<#rating>)
+
+    * [Reviews Approval](<#reviews-approval>)
+
+    * [Create Product](<#create-product>)
+
+    * [Edit Product](<#edit-product>)
+
+    * [Delete Product](<#delete-product>)
+    
+    * [Admin Page](<#admin-page>)
+    
+    * [Sign Up](<#sign-up>)
+    
+    * [Sign In](<#sign-in>)
+
+    * [Sign Out](<#sign-out>)
+
+    * [Footer](<#footer>)
+
+    * [Flash Messages](<#flash-messages>)
+
+* [**Features Left to Implement**](<#features-left-to-implement>)
+
+
+
 # Strategy
 
 ## Site User Goals
@@ -411,6 +449,8 @@ Pagination has buttons: *first page*, *previous page*, *next page*, and *last pa
 ![Pagination](readme/images/pagination.png)
 </details><br/>
 
+[Back to top](<#contents>)
+
 ### **Products**
 
 This page lists all the products that has been create at *Attic Shop*. For signed in and not signed in users this page looks the same. The page shows 12 cards before a pagination mechanism kicks in.
@@ -419,4 +459,217 @@ This page lists all the products that has been create at *Attic Shop*. For signe
 
 ![Products](readme/images/products.png)
 </details><br/>
+
+[Back to top](<#contents>)
+
+### **Wishlist**
+
+This page lists all the products that has been added to the wishlist by logged user. For not signed in users this page isn't available.
+
+<details><summary><b>Wishlist</b></summary>
+
+![Wishlist](readme/images/wishlist.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Shopping bag**
+
+This page lists all the products that has been added to the shopping bag. For signed in and not signed in users this page looks the same.
+
+<details><summary><b>Shopping bag</b></summary>
+
+![Shopping bag](readme/images/shopping_bag.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Checkout Page**
+
+This page lists all the products that has been added to the shopping bag forming an order, shows the form for delivery details and provides security way to pay with the [Stripe](https://stripe.com/en-ie). For not signed in users form on this page will be always empty.
+
+<details><summary><b>Checkout Page</b></summary>
+
+![Checkout Page](readme/images/checkout.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Order Confirmation Page**
+
+This page shows order details after successfull payment. It appears after clicking an order number in order history at Profile Page as well, with notification that this is a past confirmation.
+
+<details><summary><b>Order Confirmation Page</b></summary>
+
+![Order Confirmation Page](readme/images/confirmation.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Profile Page**
+
+This page shows delivery details and order history. For not signed in users this page isn't available.
+
+<details><summary><b>Profile Page</b></summary>
+
+![Profile Page](readme/images/profile.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Reviews**
+
+Signed in user can review each product. After approval it will appear on this products page. Each user can delete their own reviews.
+
+<details><summary><b>Reviews</b></summary>
+
+![Reviews](readme/images/reviews.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Rating**
+
+There are two ratings for each product: from the store and from the reviews. Rating from the store is set up when creating or editing a product. Rating from reviews appears if a product has approved reviews.
+
+<details><summary><b>Rating</b></summary>
+
+![Rating](readme/images/rating.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Reviews Approval**
+
+Site Owner can approve or delete draft reviews.
+
+<details><summary><b>Reviews Approval</b></summary>
+
+![Reviews Approval](readme/images/review-approve.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Create Product**
+
+Site Owner can create products.
+
+<details><summary><b>Create Product</b></summary>
+
+![Create Product](readme/images/product-create.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Edit Product**
+
+Site Owner can edit products.
+
+<details><summary><b>Edit Product</b></summary>
+
+![Edit Product](readme/images/product-edit.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Delete Product**
+
+Site Owner can delete products.
+
+<details><summary><b>Delete Product</b></summary>
+
+![Edit Product](readme/images/product-delete.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Admin Page**
+
+This page is available only for superusers by url [/admin](https://atticstore-95ba3f90b672.herokuapp.com/admin/). On this page the administrator (or other superuser decided by *Attic Shop*) can *approve* / *delete* reviews; *create* / *edit* and *delete* products. General information about *number of users*, *number of reviews*, *number of products*, *number of categories*, *unapproved reviews* is also being showed on the page. Also Site Owner can create, update or delete Size Categories and Sizes on this page.
+
+<details><summary><b>Admin Page</b></summary>
+
+![Admin Page](readme/images/admin_page.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Sign Up**
+
+If the site visitor hasn't registered user at the *Attic Shop* they can sign up.
+
+<details><summary><b>Sign Up</b></summary>
+
+![Sign Up](readme/images/sign_up.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Sign In**
+
+On this page the user can sign in to the *Attic Shop*.
+
+<details><summary><b>Sign In</b></summary>
+
+![Sign In](readme/images/sign_in.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Sign Out**
+
+When the user clicks sign out in the dropdown menu a confirmation page is being showed so that the user don't accidently sign out.
+
+<details><summary><b>Sign Out</b></summary>
+
+![Sign Out](readme/images/sign_out.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Footer**
+
+The footer area includes Newsletter Subscribtion form powered by [Mailchimp](https://mailchimp.com/), and external links to the: [Facebook Page](https://www.facebook.com/atticcamerashop/) of the store, [Instagram Page](https://www.instagram.com/cherdackshopblog/) of the store, [Creator GitHub Account](https://github.com/Sergii-Kostanets), and [Privacy Policy](https://www.privacypolicygenerator.info/live.php?token=adajRuJvNQt8Ha9xD9xU8ZvmTDXKSZIV) of the *Atic Shop*.
+
+<details><summary><b>Footer</b></summary>
+
+![Footer](readme/images/footer.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Flash Messages**
+
+The sites incorporates flash messages when an action has been performed (i.e. create/update/delete actions). Examples of this in the screenshots below.
+
+<details><summary><b>Confirmation Messages</b></summary>
+
+![Product Quantity Updated in the Shopping Bag](readme/images/message_qty_upd.png)
+![Product Removed from the Shopping Bag](readme/images/message_remove.png)
+![Product Created](readme/images/message_create.png)
+![Product Edited](readme/images/message_edit.png)
+![Product Deleted](readme/images/message_delete.png)
+![Signed In](readme/images/signed_in.png)
+![Signed Out](readme/images/signed_out.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+## Features Left to Implement
+
+* Add functionality to add/edit/delete size categories and sizes of products from website UI.
+* Add functionality to add/edit/delete categories from website UI.
+* Add likes to the reviews.
+* Add functionality to add several images of each product, add slider to view all images.
+* Add functionality to add products to the bag directly from the wishlist.
+* Add 3rd party social account providers (Google, Facebook, Twitter, GitHub, etc).
+* Add editing and deliting reviews for review author.
+
+[Back to top](<#contents>)
+
+
+
+
+
+
 
