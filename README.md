@@ -1102,3 +1102,26 @@ Google Lighthouse in Chrome Developer Tools was used to test the application wit
 
 ![Lighthouse Profile Page Result](readme/images/lighthouse_profile.png)
 </details><br/>
+
+<details><summary><b>Lighthouse Shopping Bag Result</b></summary>
+
+![Lighthouse Shopping Bag Result](readme/images/lighthouse_bag.png)
+</details><br/>
+
+<details><summary><b>Lighthouse Wishlist Result</b></summary>
+
+![Lighthouse Wishlist Result](readme/images/lighthouse_wishlist.png)
+</details><br/>
+
+<details><summary><b>Lighthouse Checkout Page Result</b></summary>
+
+![Lighthouse Checkout Page Result](readme/images/lighthouse_checkout.png)
+</details><br/>
+
+## Peer Review
+Additional testing of the application was conducted by people outside of the software development field. Some smaller spelling and grammar errors were found and corrected. No issues connected to design or handling of the site.
+
+[Back to top](<#contents>)
+
+## Known bugs
+No known bugs besides those in the fixed / unfixed bugs section.
