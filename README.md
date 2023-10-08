@@ -1079,3 +1079,26 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 * Microsoft Edge (version 114.0.1823.67)
 
 [Back to top](<#contents>)
+
+## Lighthouse
+Google Lighthouse in Chrome Developer Tools was used to test the application within the areas of *Performance*, *Accessibility*, *Best Practices* and *SEO*. The testing showed the following:
+
+<details><summary><b>Lighthouse Home Page Result</b></summary>
+
+![Lighthouse Home Page Result](readme/images/lighthouse_home.png)
+</details><br/>
+
+<details><summary><b>Lighthouse Products Page Result</b></summary>
+
+![Lighthouse Products Page Result](readme/images/lighthouse_products.png)
+</details><br/>
+
+<details><summary><b>Lighthouse Product Detail Page Result</b></summary>
+
+![Lighthouse Product Detail Page Result](readme/images/lighthouse_product_detail.png)
+</details><br/>
+
+<details><summary><b>Lighthouse Profile Page Result</b></summary>
+
+![Lighthouse Profile Page Result](readme/images/lighthouse_profile.png)
+</details><br/>
