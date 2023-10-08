@@ -870,4 +870,44 @@ When validating my own code the [W3C HTML Validator](https://validator.w3.org/) 
 ![HTML Validation Result Shopping Bag page](readme/images/html_validation_bag.png)
 </details><br/>
 
+<details><summary><b>HTML Validation Result Checkout page</b></summary>
+
+![HTML Validation Result Checkout page](readme/images/html_validation_checkout.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Order Confirmation page</b></summary>
+
+![HTML Validation Result Order Confirmation page](readme/images/html_validation_order_confirmation.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Wishlist</b></summary>
+
+![HTML Validation Result Wishlist](readme/images/html_validation_wishlist.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Review list</b></summary>
+
+![HTML Validation Result Review list](readme/images/html_validation_review.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Profile page</b></summary>
+
+![HTML Validation Result Profile page](readme/images/html_validation_profile.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Create Product</b></summary>
+
+![HTML Validation Result Create Product](readme/images/html_validation_create.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Edit Product</b></summary>
+
+![HTML Validation Result Edit Product](readme/images/html_validation_edit.png)
+</details><br/>
+
+<details><summary><b>HTML Validation Result Delete Product</b></summary>
+
+![HTML Validation Result Delete Product](readme/images/html_validation_delete.png)
+</details><br/>
+
 [Back to top](<#contents>)

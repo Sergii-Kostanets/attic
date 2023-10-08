@@ -46,12 +46,12 @@
                         {% endif %}
                     </div>
                     <div class="d-flex flex-column">
-                        <a class="text-white wishlist-remove-button" data-toggle="modal" data-target="#staticBackdropDelete">&times;</a>
-                        <div class="modal fade" id="staticBackdropDelete" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropDeleteLabel" aria-hidden="true">
+                        <a class="text-white wishlist-remove-button" data-toggle="modal" data-target="#staticBackdropDelete_{{ item.product.pk }}">&times;</a>
+                        <div class="modal fade" id="staticBackdropDelete_{{ item.product.pk }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropDeleteLabel_{{ item.product.pk }}" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title text-black" id="staticBackdropDeleteLabel">Are you sure want to delete product</h5>
+                                        <h5 class="modal-title text-black" id="staticBackdropDeleteLabel_{{ item.product.pk }}">Are you sure want to delete product</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
