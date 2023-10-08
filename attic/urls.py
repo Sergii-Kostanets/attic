@@ -20,6 +20,10 @@ from django.conf.urls.static import static
 from django.conf.urls import handler403, handler404, handler500
 from .views import page_not_found_local, server_error, page_forbidden
 
+handler403 = 'attic.urls.page_forbidden'
+handler404 = 'attic.urls.page_not_found_local'
+handler500 = 'attic.urls.server_error'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
@@ -30,10 +34,6 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('wishlist/', include('wishlist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-handler403 = 'attic.urls.page_forbidden'
-handler404 = 'attic.urls.page_not_found_local'
-handler500 = 'attic.urls.server_error'
 
 if settings.DEBUG:
     urlpatterns += [

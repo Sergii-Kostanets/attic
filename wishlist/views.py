@@ -16,7 +16,9 @@ def view_wishlist(request):
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     # Check if the product is already in the user's wishlist
-    if WishlistItem.objects.filter(user=request.user, product=product).exists():
+    wishlist_item_query = WishlistItem.objects.filter(
+        user=request.user, product=product)
+    if wishlist_item_query.exists():
         messages.info(
             request, f'You already have {product.name} in the wishlist')
         return redirect('product_detail', product_id=product_id)

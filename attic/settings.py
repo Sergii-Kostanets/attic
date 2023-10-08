@@ -233,7 +233,8 @@ else:
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 GRAPH_MODELS = {
-  'all_applications': False,
-  'group_models': True,
-  'app_labels': ["products", "bag", "profiles", "checkout", "wishlist", "home"]
+    'all_applications': False,
+    'group_models': True,
+    'app_labels': ["products", "bag", "profiles",
+                   "checkout", "wishlist", "home"]
 }

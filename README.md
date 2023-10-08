@@ -931,3 +931,36 @@ When validating my own code the [W3C CSS Validator](https://jigsaw.w3.org/css-va
 </details><br/>
 
 [Back to top](<#contents>)
+
+### PEP Validation
+
+Python code was validated according to PEP8 using the [CI Python Linter](https://pep8ci.herokuapp.com/) and [Flake8](https://pypi.org/project/flake8/). Some errors were ignored as not affecting the project.
+
+<details><summary><b>PEP Validation Result Not Ignoring Errors</b></summary>
+
+![PEP Validation Result Not Ignoring Errors](readme/images/pep_validation_with_errors.png)
+</details><br/>
+
+<details><summary><b>PEP Validation Result Ignoring Errors</b></summary>
+
+![PEP Validation Result Ignoring Errors](readme/images/pep_validation_without_errors.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### JavaScript Validation
+
+I validated all scripts in the templates. The most complex logic is in separate files.
+The [JS hint Validator](https://jshint.com/) results can be seen below. No critical errors were returned when passing through JSHint.
+
+<details><summary><b>JSHint Validation Result Stripe</b></summary>
+
+![JSHint Validation Stripe](readme/images/js_hint_validation_stripe.png)
+</details><br/>
+
+<details><summary><b>JSHint Validation Result Country</b></summary>
+
+![JSHint Validation Country](readme/images/js_hint_validation_country.png)
+</details><br/>
+
+[Back to top](<#contents>)

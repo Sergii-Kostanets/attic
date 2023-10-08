@@ -24,7 +24,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class ReviewAdmin(admin.ModelAdmin):
 
-    list_display = ('user', 'product', 'content', 'rating', 'created_at', 'approved')
+    list_display = ('user', 'product', 'content',
+                    'rating', 'created_at', 'approved')
     search_fields = ('user', 'product', 'content')
     list_filter = ('approved', 'created_at')
     actions = ['approve_comments']
