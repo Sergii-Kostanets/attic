@@ -78,6 +78,8 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 
     * [Flash Messages](<#flash-messages>)
 
+    * [Email Confirmation](<#email-confirmation>)
+
 * [**Features Left to Implement**](<#features-left-to-implement>)
 
 * [**Technologies Used**](<#technologies-used>)
@@ -676,7 +678,7 @@ The footer area includes Newsletter Subscribtion form powered by [Mailchimp](htt
 
 ### **Flash Messages**
 
-The sites incorporates flash messages when an action has been performed (i.e. create/update/delete actions). Examples of this in the screenshots below.
+The site incorporates flash messages when an action has been performed (i.e. create/update/delete actions). Examples of this in the screenshots below.
 
 <details><summary><b>Confirmation Messages</b></summary>
 
@@ -687,6 +689,22 @@ The sites incorporates flash messages when an action has been performed (i.e. cr
 ![Product Deleted](readme/images/message_delete.png)
 ![Signed In](readme/images/signed_in.png)
 ![Signed Out](readme/images/signed_out.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
+### **Email Confirmation**
+
+The site incorporates real email confirmation for account registration and email for order summary.
+
+<details><summary><b>Registration Confirmation Email</b></summary>
+
+![Registration Confirmation Email](readme/images/email_registration.png)
+</details><br/>
+
+<details><summary><b>Order Summary Email</b></summary>
+
+![Order Summary Email](readme/images/email_order.png)
 </details><br/>
 
 [Back to top](<#contents>)
