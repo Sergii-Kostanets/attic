@@ -1011,7 +1011,7 @@ In addition to tests stated above I have performed a series of manual tests. Bel
 | &check; | 12 products are rendered for the user on *Products* page before pagination kicks in
 | &check; | Clicking the on the product card image loads the product detail page
 | &check; | In the product details view the user cannot create a review and vote for rating
-| &check; | In the post detail view the signed in user cannot add product to the wishlist
+| &check; | In the product detail view the signed in user cannot add product to the wishlist
 | &check; | The search input works as expected
 | &check; | There is no access to the /admin page
 | &check; | Clicking the Facebook link in the footer area opens Facebook page in a new window
@@ -1031,7 +1031,7 @@ In addition to tests stated above I have performed a series of manual tests. Bel
 | &check; | In the product details view the user can create a review and vote for rating
 | &check; | When user submits a review a message with approval information is being showed on the page
 | &check; | In the product detail view the signed in user can delete the review created by themselves
-| &check; | In the post detail view the signed in user can add product to the wishlist
+| &check; | In the product detail view the signed in user can add product to the wishlist
 | &check; | Clicking the Profile button in the signed in user menu loads the My Profile page
 | &check; | There is no access to the /admin page
 | &check; | Clicking the Facebook link in the footer area opens Facebook page in a new window
@@ -1043,7 +1043,7 @@ In addition to tests stated above I have performed a series of manual tests. Bel
 |:-------:|:--------|
 | &check; | Clicking the Create Product button in the signed in user menu loads the Create Product page
 | &check; | Clicking the Review List button in the signed in user menu loads the Draft Reviews page
-| &check; | The edit and delete buttons is visible in post detail view and leads to editing and delete confirmation
+| &check; | The edit and delete buttons is visible in product detail view and leads to editing and delete confirmation
 | &check; | The edit and delete buttons is visible in products page and leads to editing and delete confirmation
 | &check; | The approve and delete buttons is visible in review list and leads to confirmation of deleteng or approving a review
 | &check; | There is an access to the /admin page
