@@ -6,7 +6,7 @@ This website was created for Portfolio Project #5 - Diploma in Full Stack Softwa
 
 [View live website here](https://atticstore-95ba3f90b672.herokuapp.com/)
 
-![United responsive design](readme/images/responsive.png)
+![Attic Shop responsive design](readme/images/responsive.png)
 
 # Contents
 
@@ -1396,8 +1396,8 @@ if os.path.exists('env.py'):
 ![Heroku Step 35](readme/images/heroku_35.png)
 </details><br />
 
-The live link to the 'United' site can be found [here](https://www.uniteds.games/). <br>
-The Github repository can be found [here](https://github.com/Sergii-Kostanets/codeinstitute-united).
+The live link to the *Attic Shop* site can be found [here](https://atticstore-95ba3f90b672.herokuapp.com/). <br>
+The Github repository can be found [here](https://github.com/Sergii-Kostanets/attic).
 
 [Back to top](<#contents>)
 
