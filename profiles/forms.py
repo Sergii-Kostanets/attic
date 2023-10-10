@@ -1,8 +1,15 @@
 from django import forms
+from django.core.validators import RegexValidator
 from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    # Create a regex validator to allow only digits
+    phone_number_validator = RegexValidator(
+        regex=r'^\d+$',  # Only digits are allowed
+        message='Enter a valid phone number with digits only.',
+    )
+
     class Meta:
         model = UserProfile
         exclude = ('user',)
@@ -21,6 +28,9 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address2': 'Street Address 2',
             'default_county': 'County, State or Locality',
         }
+
+        # Apply the phone number validator to the field
+        self.fields['default_phone_number'].validators.append(self.phone_number_validator)
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
