@@ -1158,9 +1158,40 @@ No known bugs besides those in the fixed / unfixed bugs section.
 
 ### Fixed Bugs
 
-* Bug: low accessibility because of buttons. Solution: add `aria-label` to describe button.
+#### Bug: low accessibility because of buttons.
 
-* Bug: HTML Validation shows errors about dublicating id's. Solution: add product primary keys to id's, or change id's to classes.
+*Solution*: add `aria-label` to describe button.
+
+#### Bug: HTML Validation shows errors about dublicating id's.
+
+*Solution*: add product primary keys to id's, or change id's to classes.
+
+#### Bug: products quantity in the bag can be more than 99 or float instead of integer.
+
+*Solution*:
+
+Add backend validation to the view.
+
+<details><summary><b>Products Quantity in the Bag backend validation</b></summary>
+
+![Products Quantity in the Bag backend validation](readme/images/bug_bag_qty_backend.png)
+</details><br />
+
+<details><summary><b>Products Quantity in the Bag backend validation code</b></summary>
+
+![Products Quantity in the Bag backend validation](readme/images/bug_bag_qty_backend_code.png)
+</details><br />
+
+Add frontend validation to the input:
+<br />
+`oninput="this.value = this.value.replace(/[^0-9]/g, '');"`
+<br />
+`onchange="if (parseInt(this.value) > 99) this.value = 99;"`
+
+<details><summary><b>Products Quantity in the Bag frontend validation</b></summary>
+
+![Products Quantity in the Bag frontend validation](readme/images/bug_bag_qty_frontend.gif)
+</details><br />
 
 ### Unfixed Bugs
 
