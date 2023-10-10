@@ -66,7 +66,7 @@ def adjust_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     if quantity < 1 or quantity > 99:
-        messages.error(request, f'Quantity must be between 1 and 99')
+        messages.error(request, 'Quantity must be between 1 and 99')
         return redirect(reverse('view_bag'))
     size = None
     if 'product_size' in request.POST:

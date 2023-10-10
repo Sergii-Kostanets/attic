@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls import handler403, handler404, handler500
 from .views import page_not_found_local, server_error, page_forbidden
 
 handler403 = 'attic.urls.page_forbidden'

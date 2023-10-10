@@ -966,6 +966,8 @@ When validating my own code the [W3C CSS Validator](https://jigsaw.w3.org/css-va
 
 Python code was validated according to PEP8 using the [CI Python Linter](https://pep8ci.herokuapp.com/) and [Flake8](https://pypi.org/project/flake8/). Some errors were ignored as not affecting the project.
 
+* [Flake8](https://pypi.org/project/flake8/) validation
+
 <details><summary><b>PEP Validation Result Not Ignoring Errors</b></summary>
 
 ![PEP Validation Result Not Ignoring Errors](readme/images/pep_validation_with_errors.png)
@@ -974,6 +976,61 @@ Python code was validated according to PEP8 using the [CI Python Linter](https:/
 <details><summary><b>PEP Validation Result Ignoring Errors</b></summary>
 
 ![PEP Validation Result Ignoring Errors](readme/images/pep_validation_without_errors.png)
+</details><br/>
+
+Errors description:
+
+E501 - style error of too long line. Sometimes it is not possible to fix it. This does not affect the project functionality.
+
+<details><summary><b>E501 settings</b></summary>
+
+![E501 settings](readme/images/E501_settings.png)
+</details><br/>
+
+<details><summary><b>E501 webhooks</b></summary>
+
+![E501 webhooks](readme/images/E501_webhooks.png)
+</details><br/>
+
+<details><summary><b>E501 webhook handler</b></summary>
+
+![E501 webhook handler](readme/images/E501_webhook_handler.png)
+</details><br/>
+
+It can be fixed (hidden) by increasing max line length.
+
+<details><summary><b>E501</b></summary>
+
+![E501](readme/images/E501.png)
+</details><br/>
+
+DJ01 - models affected error. I desided ignore it as this does not affect the project functionality.
+
+<details><summary><b>DJ01_products</b></summary>
+
+![DJ01_products](readme/images/DJ01_products.png)
+</details><br/>
+
+<details><summary><b>DJ01_profiles</b></summary>
+
+![DJ01_profiles](readme/images/DJ01_profiles.png)
+</details><br/>
+
+<details><summary><b>DJ01_checkout</b></summary>
+
+![DJ01_checkout](readme/images/DJ01_checkout.png)
+</details><br/>
+
+DJ06 - form related error. I desided ignore it as this does not affect the project functionality.
+
+<details><summary><b>DJ06_products</b></summary>
+
+![DJ06_products](readme/images/DJ06_products.png)
+</details><br/>
+
+<details><summary><b>DJ06_profiles</b></summary>
+
+![DJ06_profiles](readme/images/DJ06_profiles.png)
 </details><br/>
 
 [Back to top](<#contents>)

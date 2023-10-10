@@ -30,7 +30,9 @@ class UserProfileForm(forms.ModelForm):
         }
 
         # Apply the phone number validator to the field
-        self.fields['default_phone_number'].validators.append(self.phone_number_validator)
+        self.fields['default_phone_number'].validators.append(
+            self.phone_number_validator
+        )
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
