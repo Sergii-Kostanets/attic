@@ -1193,6 +1193,22 @@ Add frontend validation to the input:
 ![Products Quantity in the Bag frontend validation](readme/images/bug_bag_qty_frontend.gif)
 </details><br />
 
+#### Bug: phone number field at profiles page allows letters.
+
+*Solution*:
+
+Add backend validation to the form.
+
+<details><summary><b>Profile phone number backend validation</b></summary>
+
+![Products Quantity in the Bag backend validation](readme/images/bug_phone_validation.png)
+</details><br />
+
+<details><summary><b>Profile phone number backend validation code</b></summary>
+
+![Products Quantity in the Bag backend validation code](readme/images/bug_phone_validation_code.png)
+</details><br />
+
 ### Unfixed Bugs
 
 * Bug: message success always shows shopping bag contents. Temporary solution: use message info instead.
