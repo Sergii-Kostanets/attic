@@ -10,6 +10,13 @@ class ProductForm(forms.ModelForm):
         model = Product
         exclude = ['size_category', 'overall_rating']
 
+    price = forms.DecimalField(
+        label='Price',
+        min_value=Decimal('0.01'),
+        max_value=Decimal('9999.99'),
+        decimal_places=2,
+    )
+
     rating = forms.DecimalField(
         label='Rating',
         min_value=Decimal('1.00'),

@@ -1225,6 +1225,21 @@ Add `required` field to the input in `forms.py` and style radio inputs.
 ![Rating radio buttons validation code](readme/images/bug_rating_validation_code.png)
 </details><br />
 
+#### Bug: site owner can create product with negative price.
+
+*Solution*:
+
+Add backend validation to the form.
+<br />
+```
+    price = forms.DecimalField(
+        label='Price',
+        min_value=Decimal('0.01'),
+        max_value=Decimal('9999.99'),
+        decimal_places=2,
+    )
+```
+
 ### Unfixed Bugs
 
 * Bug: message success always shows shopping bag contents. Temporary solution: use message info instead.
@@ -1417,7 +1432,7 @@ if os.path.exists('env.py'):
 ```python3 manage.py migrate```
 
 24. Now we are going to get our connection to Amazon AWS connection working (this is were we will store our static files). 
-    * First you need to create an Amazon AWS account and S3 bucket, create user, user group and policy. Details can be found [here](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/40cc2543c48643fda09351da6fa90579/) and [here](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20changes%20sheet.pdf).
+    * First you need to create an Amazon AWS account and S3 bucket, create user, user group and policy. Details can be found [here](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/40cc2543c48643fda09351da6fa90579/) and [here](https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20changes%20sheet.pdf).
     * Go back to the settings.py file in Gitpod and add settings for AWS bucket.
 
 25. Let's head back to Heroku and add the API bucket keys in Config Vars. We also need to add a disable collectstatic variable to get our first deployment to Heroku to work.
