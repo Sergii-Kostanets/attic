@@ -1209,6 +1209,22 @@ Add backend validation to the form.
 ![Products Quantity in the Bag backend validation code](readme/images/bug_phone_validation_code.png)
 </details><br />
 
+#### Bug: submitting review without rating causes console errors and there is no massage for user.
+
+*Solution*:
+
+Add `required` field to the input in `forms.py` and style radio inputs.
+
+<details><summary><b>Rating radio buttons validation</b></summary>
+
+![Rating radio buttons validation](readme/images/bug_rating_validation.png)
+</details><br />
+
+<details><summary><b>Rating radio buttons validation code</b></summary>
+
+![Rating radio buttons validation code](readme/images/bug_rating_validation_code.png)
+</details><br />
+
 ### Unfixed Bugs
 
 * Bug: message success always shows shopping bag contents. Temporary solution: use message info instead.
