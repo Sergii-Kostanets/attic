@@ -1556,7 +1556,7 @@ To clone and set up this project you need to follow the steps below.
 # Acknowledgements
 This site was created for Portfolio Project #4 - Diploma in Full Stack Software Development Diploma at the [Code Institute](https://www.codeinstitute.net). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for relevant feedback during the project.
 
-*Sergii Kostanets, 2023-10-09*
+*Sergii Kostanets, 2023-10-10*
 
 [Back to top](<#contents>)
 
