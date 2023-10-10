@@ -45,7 +45,10 @@ hr {
 }
 
 #div_id_rating>div>.form-check input[type="radio"] {
-    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -999999999999;
 }
 
 #div_id_rating>div>.form-check label {

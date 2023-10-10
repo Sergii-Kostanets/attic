@@ -44,6 +44,7 @@ class ReviewForm(forms.ModelForm):
         label=False,
         choices=RATING_CHOICES,
         widget=forms.RadioSelect,
+        required=True,
     )
 
     content = forms.CharField(
