@@ -957,7 +957,7 @@ When validating my own code the [W3C CSS Validator](https://jigsaw.w3.org/css-va
 
 <details><summary><b>CSS Validation Result Profile</b></summary>
 
-![CSS Result Profile](readme/images/css_validation_Profile.png)
+![CSS Result Profile](readme/images/css_validation_profile.png)
 </details><br/>
 
 [Back to top](<#contents>)
