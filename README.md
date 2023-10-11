@@ -1035,6 +1035,213 @@ DJ06 - form related error. I desided ignore it as this does not affect the proje
 
 [Back to top](<#contents>)
 
+* [CI Python Linter](https://pep8ci.herokuapp.com/) validation
+
+Settings - same E501 style errors of too long line. This does not affect the project functionality.
+
+<details><summary><b>Python Linter settings</b></summary>
+
+![Python Linter settings](readme/images/pl_settings.png)
+</details><br/>
+
+Project urls - no errors.
+
+<details><summary><b>Python Linter project urls</b></summary>
+
+![Python Linter project urls](readme/images/pl_project_urls.png)
+</details><br/>
+
+Project views - no errors.
+
+<details><summary><b>Python Linter project views</b></summary>
+
+![Python Linter project views](readme/images/pl_project_views.png)
+</details><br/>
+
+Bag app contexts - no errors.
+
+<details><summary><b>Python Linter Bag app contexts</b></summary>
+
+![Python Linter Bag app contexts](readme/images/pl_bag_contexts.png)
+</details><br/>
+
+Bag app urls - no errors.
+
+<details><summary><b>Python Linter Bag app urls</b></summary>
+
+![Python Linter Bag app urls](readme/images/pl_bag_urls.png)
+</details><br/>
+
+Bag app views - no errors.
+
+<details><summary><b>Python Linter Bag app views</b></summary>
+
+![Python Linter Bag app views](readme/images/pl_bag_views.png)
+</details><br/>
+
+Checkout app admin - no errors.
+
+<details><summary><b>Python Linter Checkout app admin</b></summary>
+
+![Python Linter Checkout app admin](readme/images/pl_checkout_admin.png)
+</details><br/>
+
+Checkout app forms - no errors.
+
+<details><summary><b>Python Linter Checkout app forms</b></summary>
+
+![Python Linter Checkout app forms](readme/images/pl_checkout_forms.png)
+</details><br/>
+
+Checkout app models - no errors.
+
+<details><summary><b>Python Linter Checkout app models</b></summary>
+
+![Python Linter Checkout app models](readme/images/pl_checkout_models.png)
+</details><br/>
+
+Checkout app signals - no errors.
+
+<details><summary><b>Python Linter Checkout app signals</b></summary>
+
+![Python Linter Checkout app signals](readme/images/pl_checkout_signals.png)
+</details><br/>
+
+Checkout app urls - no errors.
+
+<details><summary><b>Python Linter Checkout app urls</b></summary>
+
+![Python Linter Checkout app urls](readme/images/pl_checkout_urls.png)
+</details><br/>
+
+Checkout app views - no errors.
+
+<details><summary><b>Python Linter Checkout app views</b></summary>
+
+![Python Linter Checkout app views](readme/images/pl_checkout_views.png)
+</details><br/>
+
+Checkout app webhook handler - same E501 style errors of too long line. This does not affect the project functionality.
+
+<details><summary><b>Python Linter Checkout app webhook handler</b></summary>
+
+![Python Linter Checkout app webhook handler](readme/images/pl_checkout_webhook_handler.png)
+</details><br/>
+
+Checkout app webhooks - same E501 style error of too long line. This does not affect the project functionality.
+
+<details><summary><b>Python Linter Checkout app webhooks</b></summary>
+
+![Python Linter Checkout app webhooks](readme/images/pl_checkout_webhooks.png)
+</details><br/>
+
+Home app urls - no errors.
+
+<details><summary><b>Python Linter Home app urls</b></summary>
+
+![Python Linter Home app urls](readme/images/pl_home_urls.png)
+</details><br/>
+
+Home app views - no errors.
+
+<details><summary><b>Python Linter Home app views</b></summary>
+
+![Python Linter Home app views](readme/images/pl_home_views.png)
+</details><br/>
+
+Products app admin - no errors.
+
+<details><summary><b>Python Linter Products app admin</b></summary>
+
+![Python Linter Products app admin](readme/images/pl_products_admin.png)
+</details><br/>
+
+Products app forms - no errors.
+
+<details><summary><b>Python Linter Products app forms</b></summary>
+
+![Python Linter Products app forms](readme/images/pl_products_forms.png)
+</details><br/>
+
+Products app models - no errors.
+
+<details><summary><b>Python Linter Products app models</b></summary>
+
+![Python Linter Products app models](readme/images/pl_products_models.png)
+</details><br/>
+
+Products app urls - no errors.
+
+<details><summary><b>Python Linter Products app urls</b></summary>
+
+![Python Linter Products app urls](readme/images/pl_products_urls.png)
+</details><br/>
+
+Products app views - no errors.
+
+<details><summary><b>Python Linter Products app views</b></summary>
+
+![Python Linter Products app views](readme/images/pl_products_views.png)
+</details><br/>
+
+Products app widgets - no errors.
+
+<details><summary><b>Python Linter Products app widgets</b></summary>
+
+![Python Linter Products app widgets](readme/images/pl_products_widgets.png)
+</details><br/>
+
+Profiles app forms - no errors.
+
+<details><summary><b>Python Linter Profiles app forms</b></summary>
+
+![Python Linter Profiles app forms](readme/images/pl_profiles_forms.png)
+</details><br/>
+
+Profiles app models - no errors.
+
+<details><summary><b>Python Linter Profiles app models</b></summary>
+
+![Python Linter Profiles app models](readme/images/pl_profiles_models.png)
+</details><br/>
+
+Profiles app urls - no errors.
+
+<details><summary><b>Python Linter Profiles app urls</b></summary>
+
+![Python Linter Profiles app urls](readme/images/pl_profiles_urls.png)
+</details><br/>
+
+Profiles app views - no errors.
+
+<details><summary><b>Python Linter Profiles app views</b></summary>
+
+![Python Linter Profiles app views](readme/images/pl_profiles_views.png)
+</details><br/>
+
+Wishlist app models - no errors.
+
+<details><summary><b>Python Linter Wishlist app models</b></summary>
+
+![Python Linter Wishlist app models](readme/images/pl_wishlist_models.png)
+</details><br/>
+
+Wishlist app urls - no errors.
+
+<details><summary><b>Python Linter Wishlist app urls</b></summary>
+
+![Python Linter Wishlist app urls](readme/images/pl_wishlist_urls.png)
+</details><br/>
+
+Wishlist app views - no errors.
+
+<details><summary><b>Python Linter Wishlist app views</b></summary>
+
+![Python Linter Wishlist app views](readme/images/pl_wishlist_views.png)
+</details><br/>
+
+[Back to top](<#contents>)
+
 ### JavaScript Validation
 
 I validated all scripts in the templates. The most complex logic is in separate files.
