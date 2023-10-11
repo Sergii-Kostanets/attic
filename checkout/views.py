@@ -105,6 +105,10 @@ def checkout(request):
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
+        if total > 99999999.99:
+            messages.error(request, "Order total exceeds the maximum \
+                allowed amount.")
+            return redirect(reverse('view_bag'))
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(

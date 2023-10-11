@@ -8,6 +8,7 @@ from django.shortcuts import (
 from django.contrib import messages
 from products.models import Product
 from .contexts import bag_contents
+from django.conf import settings
 
 
 def view_bag(request):
@@ -29,30 +30,64 @@ def add_to_bag(request, item_id):
         size = request.POST['product_size']
     bag = request.session.get('bag', {})
 
+    current_bag = bag_contents(request)
+    grand_total = current_bag['grand_total']
+
+    # Check if adding this item will exceed the limit
+    if grand_total + (quantity * product.price) > settings.MAX_ORDER_TOTAL:
+        messages.error(request, 'Adding this item will exceed \
+            the maximum order total')
+        return redirect(reverse('view_bag'))
+
     if size:
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][size] += quantity
-                messages.success(
-                    request,
-                    f'Updated {product.name} (size {size}) quantity \
-                        to {bag[item_id]["items_by_size"][size]}')
+                # Check if adding the quantity exceeds 99
+                if bag[item_id]['items_by_size'][size] + quantity > 99:
+                    messages.error(request, 'You can only add up to 99 \
+                        of the same item')
+                else:
+                    bag[item_id]['items_by_size'][size] += quantity
+                    messages.success(
+                        request,
+                        f'Updated {product.name} (size {size}) quantity \
+                            to {bag[item_id]["items_by_size"][size]}')
             else:
-                bag[item_id]['items_by_size'][size] = quantity
+                # Check if adding the quantity exceeds 99
+                if quantity > 99:
+                    messages.error(request, 'You can only add up to 99 \
+                        of the same item.')
+                else:
+                    bag[item_id]['items_by_size'][size] = quantity
+                    messages.success(request, f'Added {product.name} \
+                        (size {size}) to your bag')
+        else:
+            # Check if adding the quantity exceeds 99
+            if quantity > 99:
+                messages.error(request, 'You can only add up to 99 \
+                    of the same item.')
+            else:
+                bag[item_id] = {'items_by_size': {size: quantity}}
                 messages.success(request, f'Added {product.name} \
                     (size {size}) to your bag')
-        else:
-            bag[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added {product.name} \
-                (size {size}) to your bag')
     else:
         if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity \
-                to {bag[item_id]}')
+            # Check if adding the quantity exceeds 99
+            if bag[item_id] + quantity > 99:
+                messages.error(request, 'You can only add up to 99 \
+                    of the same item.')
+            else:
+                bag[item_id] += quantity
+                messages.success(request, f'Updated {product.name} quantity \
+                    to {bag[item_id]}')
         else:
-            bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
+            # Check if adding the quantity exceeds 99
+            if quantity > 99:
+                messages.error(request, 'You can only add up to 99 \
+                    of the same item.')
+            else:
+                bag[item_id] = quantity
+                messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
