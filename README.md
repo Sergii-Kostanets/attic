@@ -1033,6 +1033,20 @@ DJ06 - form related error. I desided ignore it as this does not affect the proje
 ![DJ06_profiles](readme/images/DJ06_profiles.png)
 </details><br/>
 
+F401 in the settings - I use env.py for local development.
+
+<details><summary><b>F401_settings</b></summary>
+
+![F401_settings](readme/images/F401_settings.png)
+</details><br/>
+
+F401 in the checkout app - I use signals and my functionality of calculating order totals brakes without this import.
+
+<details><summary><b>F401_checkout_apps</b></summary>
+
+![F401_checkout_apps](readme/images/F401_checkout_apps.png)
+</details><br/>
+
 [Back to top](<#contents>)
 
 * [CI Python Linter](https://pep8ci.herokuapp.com/) validation
