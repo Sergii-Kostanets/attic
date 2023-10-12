@@ -1522,10 +1522,15 @@ Add backend validation to the form.
 
 *Solution*:
 
-Replace checking existance of the checkbox:
+Replace checking existance of the checkbox in the view:
 ```request.session['save_info'] = 'save-info' in request.POST```
 To the checking if it is true of false:
 ```request.session['save_info'] = bool(request.POST.get('save-info'))```
+
+Also replace:
+```var saveInfo = Boolean($('#id-save-info').attr('checked'));```
+For:
+```var saveInfo = $('#id-save-info').is('checked');```
 
 ### Unfixed Bugs
 
