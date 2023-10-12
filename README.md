@@ -1530,7 +1530,7 @@ To the checking if it is true of false:
 Also replace:
 ```var saveInfo = Boolean($('#id-save-info').attr('checked'));```
 For:
-```var saveInfo = $('#id-save-info').is('checked');```
+```var saveInfo = $('#id-save-info').is(':checked');```
 
 ### Unfixed Bugs
 
