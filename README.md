@@ -1504,6 +1504,15 @@ Add backend validation to the form.
     )
 ```
 
+#### Bug: checkbox to save delivery info doesn't work, saves info even if unchecked.
+
+*Solution*:
+
+Replace checking existance of the checkbox:
+```request.session['save_info'] = 'save-info' in request.POST```
+To the checking if it is true of false:
+```request.session['save_info'] = bool(request.POST.get('save-info'))```
+
 ### Unfixed Bugs
 
 * Bug: message success always shows shopping bag contents. Temporary solution: use message info instead.
