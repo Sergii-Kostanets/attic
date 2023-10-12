@@ -1,6 +1,4 @@
 [flake8]
-; ignore = DJ01
-; ignore = DJ06
-ignore = DJ01,DJ06
+ignore = DJ01,DJ06,F401
 exclude = .git,__pycache__,venv,.devcontainer,.vscode,env.py,*/migrations/*
 max-line-length = 100
