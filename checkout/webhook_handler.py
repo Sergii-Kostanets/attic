@@ -52,7 +52,7 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
-        save_info = intent.metadata.save_info
+        save_info = True if intent.metadata.save_info == "true" else False
 
         # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(

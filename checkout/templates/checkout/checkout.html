@@ -159,16 +159,16 @@
     const phoneNumberError = document.getElementById("phone-number-error");
     const submitButton = document.getElementById("submit-button");
     phoneNumberInput.addEventListener("input", function () {
-      const inputValue = phoneNumberInput.value;
-      const validPhoneNumber = /^\d{10,12}$/;
+        const inputValue = phoneNumberInput.value;
+        const validPhoneNumber = /^\d{10,12}$/;
 
-      if (validPhoneNumber.test(inputValue)) {
-        phoneNumberError.textContent = "";
-        submitButton.removeAttribute("disabled");
-      } else {
-        phoneNumberError.textContent = "Phone number must be between 10 and 12 digits.";
-        submitButton.setAttribute("disabled", "disabled");
-      }
+        if (validPhoneNumber.test(inputValue)) {
+            phoneNumberError.textContent = "";
+            submitButton.removeAttribute("disabled");
+        } else {
+            phoneNumberError.textContent = "Phone number must be between 10 and 12 digits.";
+            submitButton.setAttribute("disabled", "disabled");
+        }
     });
     </script>
 {% endblock %}
