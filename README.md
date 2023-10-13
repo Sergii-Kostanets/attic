@@ -1518,25 +1518,31 @@ Add backend validation to the form.
     )
 ```
 
-#### Bug: checkbox to save delivery info doesn't work, saves info even if unchecked.
-
-*Solution*:
-
-Replace checking existance of the checkbox in the view:
-```request.session['save_info'] = 'save-info' in request.POST```
-To the checking if it is true of false:
-```request.session['save_info'] = bool(request.POST.get('save-info'))```
-
-Also replace:
-```var saveInfo = Boolean($('#id-save-info').attr('checked'));```
-For:
-```var saveInfo = $('#id-save-info').is(':checked');```
-
 ### Unfixed Bugs
 
 * Bug: message success always shows shopping bag contents. Temporary solution: use message info instead.
 
 * Bug: forget password doesn't work yet. Temporary solution: disable forget password functionality.
+
+* Bug: checkbox to save delivery info doesn't work, saves info even if unchecked.
+
+    *First Solution*:
+
+    Replace checking existance of the checkbox in the view:
+    ```request.session['save_info'] = 'save-info' in request.POST```
+    To the checking if it is true of false:
+    ```request.session['save_info'] = bool(request.POST.get('save-info'))```
+    That works only in local environment. After deployment on Heroku it's saving delivery info even if checkbox unchecked.
+
+    *Second Solution*:
+
+    Replace line in `stripe_elements.js`:
+    ```var saveInfo = Boolean($('#id-save-info').attr('checked'));```
+    For:
+    ```var saveInfo = $('#id-save-info').is(':checked');```
+    That's also works in local environment, but not in production.
+    
+* Bug: backend validation of phone number on checkout page. Every attempt to add backend validation failed. After adding backend validation payment doesn't work.
 
 [Back to top](<#contents>)
 
