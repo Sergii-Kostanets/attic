@@ -200,6 +200,8 @@ Users can subscribe to a newsletter to stay up to date with what is happening an
 <details><summary><b>Newsletter</b></summary>
 
 ![Newsletter](readme/images/newsletter.png)
+
+![Newsletter email](readme/images/newsletter_email.png)
 </details><br/>
 
 ### Additional
