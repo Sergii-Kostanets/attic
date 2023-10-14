@@ -1523,26 +1523,38 @@ Add backend validation to the form.
 *First Solution*:
 
 Replace checking existance of the checkbox in the view:
+
 ```request.session['save_info'] = 'save-info' in request.POST```
+
 To the checking if it is true of false:
+
 ```request.session['save_info'] = bool(request.POST.get('save-info'))```
+
 That works only in local environment. After deployment on Heroku it's saving delivery info even if checkbox unchecked.
 
 *Second Solution*:
 
 Replace line in `stripe_elements.js`:
+
 ```var saveInfo = Boolean($('#id-save-info').attr('checked'));```
+
 For:
+
 ```var saveInfo = $('#id-save-info').is(':checked');```
+
 That's also works in local environment, but not in production.
 
 *Final Solution*:
 
 Replace line in `checkout/webhook_handler.py`:
+
 ```save_info = intent.metadata.save_info```
+
 For:
+
 ```save_info = True if intent.metadata.save_info == "true" else False```
-To get from Stripe correct value. Previously getting string `"false"`` to `True`.
+
+To get from Stripe correct value. Previously getting string `"false"` to `True`.
 
 ### Unfixed Bugs
 
